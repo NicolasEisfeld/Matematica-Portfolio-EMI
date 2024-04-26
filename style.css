@@ -2,28 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
-h1 {
-    color: #fff;
-    background-color: #343434;
-    font-family: Montserrat;
-    font-size: 48px;
-    margin: 168px 0px 2px
-}
-h2 { 
-    color: #fff;
-    background-color: #343434;
-    font-family: JetBrains Mono;
-    font-size: 28px;
-    margin: 2px 0px 0px;
-}
-.subtitle {
-    margin: 0px 0px 96px
-}
-figure {
-    color: #8473ff;
-    margin: 104px 0px 0px;
-    position: absolute;
-    top: -28px;
+*{
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -37,5 +18,34 @@ body {
     letter-spacing: 0.3px;
     margin: 80px 64px
 }
+
+.title {
+    color: #fff;
+    background-color: #343434;
+    font-family: Montserrat;
+    font-size: 32px;
+    margin: 97px 0px 2px
+}
+h2 { 
+    color: #fff;
+    background-color: #343434;
+    font-family: JetBrains Mono;
+    font-size: 28px;
+    margin: 2px 0px 0px;
+}
+.subtitle {
+    margin: 0px 0px 96px
+}
+.animation-math {
+    position: absolute;
+    right: 75px;
+    top: -10px;
+    margin: 104px 0px 0px;
+    
+}
+.line {
+    background-color: #8473ff ;
+}
+
 
  
