@@ -23,24 +23,35 @@
       </div>
       <div class="subtitle">
         
-        <h2 align="left" id="descrip-course">EMI - Informática 
-        Nicolas Eisfeld Ferreira</h2>
+        <h2 align="left" id="descrip-course" class="teste">EMI - Informática </h2>
         <script>
           
           function typeWriter(elemento) {
             const textoArray = elemento.innerHTML.split('');
-            console.log(titulo);
+            console.log(titulo1);
             elemento.innerHTML = '';
             console.log(textoArray);
             textoArray.forEach((letra, i) => {
              setTimeout(() => elemento.innerHTML += letra, 75 * i);
             });
           }
-
-
-
-          const titulo = document.querySelector('h2');
-          typeWriter(titulo);
+          const titulo1 = document.querySelector('#descrip-course');
+          typeWriter(titulo1);
+        </script>
+        <h2 align="left" id="autor-name">Nicolas Eisfeld Ferreira</h2>
+        <script>
+          
+          function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            console.log(titulo2);
+            elemento.innerHTML = '';
+            console.log(textoArray);
+            textoArray.forEach((letra, i) => {
+             setTimeout(() => elemento.innerHTML += letra, 75 * i);
+            });
+          }
+          const titulo2 = document.querySelector('#autor-name');
+          typeWriter(titulo2);
         </script>
       </div>
     </td>
@@ -59,7 +70,7 @@
     <div class="year-1">
       <h3>1º Ano Letivo:</h3>
       <ul>
-        <li><a alt="1-Trimestre">1º Trimestre</a></li>
+        <li><a href="index.html"alt="1-Trimestre">1º Trimestre</a></li>
         <li>2º Trimestre</li>
         <li>3º Trimestre</li>
       </ul>
