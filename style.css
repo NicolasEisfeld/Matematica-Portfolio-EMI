@@ -5,47 +5,81 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    align-items: left;
+    justify-content: left;
     min-width: 320px;
     color: #fff;
     background-color: #343434;
     font-family: Hanken Grotesk;
     font-size: 18px;
-    line-height: 1.667;
+    line-height: 1.8;
     word-spacing: 2px;
     letter-spacing: 0.3px;
     margin: 80px 64px
 }
 
 .title {
-    color: #fff;
-    background-color: #343434;
     font-family: Montserrat;
     font-size: 32px;
     margin: 97px 0px 2px
 }
+.course-descrip {
+    color: #8473ff
+}
 h2 { 
-    color: #fff;
-    background-color: #343434;
     font-family: JetBrains Mono;
     font-size: 28px;
     margin: 2px 0px 0px;
 }
+
 .subtitle {
-    margin: 0px 0px 96px
+    margin: 0px 0px 96px;
+    word-break: break-word;
 }
+
+h2::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+@keyframes blink {
+    0%, 100% {
+       opacity: 1;
+    }
+    50% {
+       opacity: 0;
+    }
+  }
+
 .animation-math {
     position: absolute;
-    right: 75px;
+    right: 70px;
     top: -10px;
-    margin: 104px 0px 0px;
+    margin: 80px 0px 0px;
     
 }
 .line {
-    background-color: #8473ff ;
+    color: #8473ff ;
 }
-
+.introduction {
+    margin-top: 25px;
+}
+.content-trimesters {
+    margin: 15px 0px 0px
+}
+ul {
+    margin: 15px 35px
+}
+#Copyright {
+    font-family: JetBrains Mono;
+    font-size: 14px;
+}
 
  
