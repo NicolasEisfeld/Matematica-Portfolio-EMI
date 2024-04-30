@@ -22,35 +22,17 @@
         <h1 align="left" id="material-name"><b>Portfólio de Matemática</b></h1>
       </div>
       <div class="subtitle">   
-        <h2 align="left" id="descrip-course" class="teste">EMI - Informática </h2>
+        <h2 align="left" id="description" class="teste">EMI - Informática Nicolas Eisfeld Ferreira</h2>
         <script>
-          
-          function typeWriter(elemento) {
-            const textoArray = elemento.innerHTML.split('');
-            console.log(titulo1);
-            elemento.innerHTML = '';
-            console.log(textoArray);
-            textoArray.forEach((letra, i) => {
-             setTimeout(() => elemento.innerHTML += letra, 75 * i);
+          function typeWriter(element) {
+            const textArray = element.innerHTML.split('');
+            element.innerHTML = '';
+            textArray.forEach((letter, i) => {
+             setTimeout(() => element.innerHTML += letter, 75 * i);
             });
           }
-          const titulo1 = document.querySelector('#descrip-course');
-          typeWriter(titulo1);
-        </script>
-        <h2 align="left" id="autor-name">Nicolas Eisfeld Ferreira</h2>
-        <script>
-          
-          function typeWriter(elemento) {
-            const textoArray = elemento.innerHTML.split('');
-            console.log(titulo2);
-            elemento.innerHTML = '';
-            console.log(textoArray);
-            textoArray.forEach((letra, i) => {
-             setTimeout(() => elemento.innerHTML += letra, 75 * i);
-            });
-          }
-          const titulo2 = document.querySelector('#autor-name');
-          typeWriter(titulo2);
+          const title = document.querySelector('#description');
+          typeWriter(title);
         </script>
       </div>
     </td>
@@ -95,7 +77,7 @@
   </section>
 
   <section class="footer">
-    <img  id="Logo-IFRS" src="https://ifrs.edu.br/erechim/wp-content/uploads/sites/3/2017/11/Identidade-visual-Horizontal-em-monocromia-3-png.png" width="312" height="104">
+    
     <p align="right" id="Copyright"><b>Direitos reservados ao estudante <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a></b></p>
   </section>
 </body>
