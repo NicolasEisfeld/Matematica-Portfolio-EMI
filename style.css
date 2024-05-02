@@ -12,7 +12,7 @@ body {
     align-items: left;
     justify-content: left;
     min-width: 320px;
-    color: #fff;
+    color: #f1faff;
     background-color: #343434;
     font-family: Hanken Grotesk;
     font-size: 18px;
@@ -22,12 +22,14 @@ body {
     margin: 80px 64px
 }
 
-.title {
+h1 {
+    color: #f1faff;
     font-family: Montserrat;
-    font-size: 36px;
-    margin: 97px 0px 2px
+    font-size: 56px;
+    margin: 97px 0px 2px;
 }
 h2 { 
+    color: #f1faff;
     font-family: JetBrains Mono;
     font-size: 29px;
     margin: 2px 783px 96px 0px;
@@ -60,17 +62,35 @@ h2::after {
     color: #8473ff ;
 }
 .introduction {
-    margin: 25px 0px;
+    margin: 25px 0px 134px;
 }
 .content {
     margin: 15px 0px 0px
 }
-ul {
-    margin: 0px 40px 15px;
+summary {
+    all: unset;
+    padding: 16px;
+    color:#f1faff;
+    background-color: #222222;
+    font-size: 32px;
+    width: 100%;
+    cursor: pointer;
 }
 
-#Logo-IFRS {
-    margin-top: 35px;
+details {
+    background-color: #303030;
+    color:#f1faff;
+    margin-right: 42px;
+    
+}
+ul {
+    margin-left: 32px;
+    padding: 16px;
+    padding-bottom: 16px;
+    font-size: 22px;
+}
+li + li{
+    margin-top: 4px;
 }
 #Copyright {
     font-family: JetBrains Mono;
