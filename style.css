@@ -63,6 +63,7 @@ h2::after {
 }
 .introduction {
     margin: 25px 0px 134px;
+    font-size: 20px;
 }
 .content {
     margin: 15px 0px 0px
