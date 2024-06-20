@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Octal</title>
+  </head>
+  <body link="#a1aaaa" vlink="#a1aaaa" bgcolor="#262626">
+    <font color="#f1faff" face="Segoe UI" size="4">
+      <code></code>
+      <table align="center">
+        <tr>
+          <th width="350"><a href="index.html">Introdução</a></th>
+          <th width="350"><a href="pag1.html">Sistema Decimal</a></th>
+          <th width="350"><a href="pag2.html">Sistema Binário</a></th>
+          <th width="350"><a href="pag4.html">Sistema Hexadecimal</a></th>
+        </tr>
+      </table>
+      <h1>Sistema Octal</h1>
+      <hr>
+      <p>
+        É a base composta por 8 algarismos diferentes, sendo eles: 0, 1, 2, 3 ,
+        4, 5, 6 e 7
+        <br>
+        <p>
+          Ele foi uma alternativa ao sistema binários na informática e computação por um tempo, porém com o tempo essa posição ficou ao sistema hexadecimal (base 16) e o sistema binário ainda permanece como o principal sistema compacto computacional.
+        </p>
+
+        <b>Destaque</b>: Sempre uma base numérica será igual a quantidade de
+        algarismos utilizados nela. Como sempre é necessário um algarismo para
+        representar o vazio ou neutro, o algarismo maior do sistema sempre vai
+        ser o próprio número da base menos 1.
+      </p>
+      <h2>Conversão de Decimal para Octal</h2>
+      <p>
+        É necessário fazer a divisão do número no sistema decimal por 8 e guardar o resultado da divisão. Em seguinte, repita a
+        divisão do resultado da primeira divisão por 8 até não houver mais restos. Assim, os restos das divisões efetuadas de
+        trás para frente será o valor decimal em octal.
+        <br>
+        <br>Exemplo:ㅤ18 / 8 = 2, resto 2;
+        <br>ㅤㅤㅤㅤㅤ(18)<sub>10</sub> = (22)<sub>8</sub>
+        <br>
+        <br>ㅤㅤㅤㅤㅤ1200 / 8 = 150, resto 0;
+        <br>ㅤㅤㅤㅤㅤ150 / 8 = 18, resto 6;
+        <br>ㅤㅤㅤㅤㅤ18 / 8 = 2, resto 2;
+        <br>ㅤㅤㅤㅤㅤ(1200)<sub>10</sub> = (2260)<sub>8</sub>
+      </p>
+      <h2>Conversão de Octal para Decimal</h2>
+      <p>
+        Cada dígito da base Octal deve ser multiplicado pelas potências de base 8.
+        Após, deve somar os resultados e assim, terá o valor no sistema decimal.
+        <br />
+        <br />Exemplo:ㅤ(307)<sub>8</sub> = 3 x 8<sup>2</sup> + 0 x 8<sup>1</sup> + 7 x 8<sup>0</sup>;
+        <br />ㅤㅤㅤㅤㅤ(307)<sub>8</sub>
+        = 192 + 0 + 7; <br>ㅤㅤㅤㅤㅤ(307)<sub>8</sub> = (199)<sub>10</sub>
+        <br />
+        <br />Exemplo:ㅤ(654321)<sub>8</sub> = 6x8<sup>5</sup> + 5x8<sup>4</sup> + 4x8<sup>3</sup> + 3x8<sup>2</sup> + 2x8<sup>1</sup> + 1x8<sup>0</sup>
+        <br />ㅤㅤㅤㅤㅤ(654321)<sub>8</sub>
+        = 196608 + 20480 + 2048 + 192 + 16 + 1; <br>ㅤㅤㅤㅤㅤ(654321)<sub>8</sub> = (219345)<sub>10</sub>
+      </p>
+      <h2>Conversão direta entre o Sistema Binário e o Sistema Octal</h2>
+      <table width="550">
+        <tr>
+          <th colspan="9">Tabela de Equivalência</th>
+        </tr>
+        <tr align="center"></tr>
+          <th>Binário</th>
+          <td>000</td>
+          <td>001</td>
+          <td>010</td>
+          <td>011</td>
+          <td>100</td>
+          <td>101</td>
+          <td>110</td>
+          <td>111</td>
+        </tr>
+        <tr align="center">
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+        </tr>
+        <tr align="center">
+          <th>Octal</th>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+      </table>
+      <p>
+        Exemplo:ㅤ(101111)<sub>2</sub> = (101)<sub>2</sub> (111)<sub>2</sub>
+        <br> ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ↓ ㅤㅤ↓
+        <br>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ5ㅤㅤ7
+ㅤ=ㅤ(57)<sub>8</sub>      </p>
+        ㅤㅤㅤㅤㅤ(10110)<sub>2</sub> = (010)<sub>2</sub> (110)<sub>2</sub>
+        <br> ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ↓ ㅤㅤ↓
+        <br>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ2ㅤㅤ6
+        ㅤ=ㅤ(26)<sub>8</sub> </p>
+        ㅤㅤㅤㅤㅤ(111100)<sub>2</sub> = (111)<sub>2</sub> (100)<sub>2</sub>
+        <br> ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ↓ ㅤㅤ↓
+        <br>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ7ㅤㅤ4
+        ㅤ=ㅤ(74)<sub>8</sub> </p>
+      <h2>Tabela do Sistema Octal e o Sistema Hexadecimal</h2>
+      <table width="550" align="center">
+        <tr>
+          <th>Octal</th>
+          <th>Hexadecimal</th>
+        </tr>
+        <tr>
+          <td><i>Base 8</i></td>
+          <td><i>Base 16</i></td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>D</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>E</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>F</td>
+        </tr>
+      </table>
+      <p align="center"><a href="index.html">
+          <font size="3">Voltar para a página inicial</font>
+        </a></p>
+      <p align="right">
+        <font size="2">
+          <b>Feito pelo estudante
+            <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
+          </b>
+          <br>Instituto Federal de Educação,Ciência e Tecnologia do Rio Grande do Sul - Campus Erechim
+        </font>
+    </font>
+  </body>
+</html>
