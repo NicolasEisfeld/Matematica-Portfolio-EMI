@@ -2,18 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+:root {
+    --main-color: #f1faff;
+    --background: #343434;
+    --menu: #222222;
+}
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    transition: 0.2 linear;
 }
 
-body {
+.landing-page {
     align-items: left;
     justify-content: left;
     min-width: 320px;
-    color: #f1faff;
-    background-color: #343434;
+    color: var(--main-color);
+    background-color: var(--background);
     font-family: Hanken Grotesk;
     font-size: 18px;
     line-height: 1.8;
@@ -21,15 +29,36 @@ body {
     letter-spacing: 0.3px;
     margin: 80px 64px
 }
+.menu-header {
+    position: fixed;
+    z-index: 99;
+    border-bottom: var(--main-color);
+    background-color: var(--menu);
+    top: 0;
+    right: 0;
+    left: 0;
+    
+}
 
+.menu-header section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: rem;
+    padding-bottom: 0.5rem;
+}
+.nav-bar a {
+    color: var(--main-color);
+    border-bottom: var(--main-color);
+}
 h1 {
-    color: #f1faff;
+    color: var(--main-color);
     font-family: Montserrat;
     font-size: 56px;
     margin: 97px 0px 2px;
 }
 h2 { 
-    color: #f1faff;
+    color: var(--main-color);
     font-family: JetBrains Mono;
     font-size: 29px;
     margin: 2px 783px 96px 0px;
@@ -63,7 +92,6 @@ h2::after {
 }
 .introduction {
     margin: 25px 0px 134px;
-    font-size: 20px;
 }
 .content {
     margin: 15px 0px 0px
