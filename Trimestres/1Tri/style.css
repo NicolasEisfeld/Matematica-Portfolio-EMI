@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-color: #f1faff;
+    --background: #343434;
+    --menu: #222222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    transition: 0.2 linear;
+}
+
+.Tri-Index {
+    align-items: left;
+    justify-content: left;
+    min-width: 320px;
+    color: var(--main-color);
+    background-color: var(--background);
+    font-family: Hanken Grotesk;
+    font-size: 18px;
+    line-height: 1.8;
+    word-spacing: 2px;
+    letter-spacing: 0.3px;
+    margin: 80px 64px
+}
+
+.menu-header {
+    position: fixed;
+    z-index: 99;
+    border-bottom: var(--main-color);
+    background-color: var(--menu);
+    top: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.menu-header section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+.menu-header a {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-bar a {
+    color: var(--main-color);
+    border-bottom: var(--main-color);
+}
+
+h1 {
+    color: var(--main-color);
+    font-family: Montserrat;
+    font-size: 56px;
+    margin: 97px 0px 2px;
+}
+
+h2 {
+    color: var(--main-color);
+    font-family: JetBrains Mono;
+    font-size: 29px;
+    margin: 36px 76px 28px 0px;
+}
+
+ul {
+    margin-left: 32px;
+    padding: 16px;
+    padding-bottom: 16px;
+    font-size: 22px;
+}
+
+li+li {
+    margin-top: 4px;
+}
+
+
+summary {
+    all: unset;
+    padding: 16px;
+    color: #f1faff;
+    background-color: #222222;
+    font-size: 32px;
+    width: 100%;
+}
+
+.index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: rem;
+    padding-bottom: 0.5rem;
+}
+
+#Copyright {
+    font-family: JetBrains Mono;
+    font-size: 14px;
+}
