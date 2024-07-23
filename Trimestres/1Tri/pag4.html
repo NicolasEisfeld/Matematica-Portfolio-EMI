@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Hexadecimal</title>
+  </head>
+  <body link="#a1aaaa" bgcolor="#262626">
+    <font color="#f1faff" face="Segoe UI" size="4">
+        <table align="center">
+            <tr>
+              <th width="350"><a href="index.html">Introdução</a></th>
+              <th width="350"><a href="pag1.html">Sistema Decimal</a></th>
+              <th width="350"><a href="pag2.html">Sistema Binário</a></th>
+              <th width="350"><a href="pag3.html">Sistema Octal</a></th>
+            </tr>
+        </table>
+      <h1>Sistema Hexadecimal</h1>
+      <p>
+        É uma das bases mais conhecidas (sendo a <b>alternativa</b> do sistema númerico binário), pois ela é usada na área de <b>computação gráfica</b> e <b>informática</b> no geral, com o intuito de <b>compactar códigos extensos</b> e, através disso, simbolizar uma gama alta de 
+        cores (<b>Sistema RGB</b>) como um exemplo de seu uso. Ela possui 16 algarismos distintos: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+      </p>
+      <img src="Binary_file.png" width="455" alt="Sequência de bytes em hexadecimal de um arquivo binário">
+      <br>
+      <q>
+        <font size="1">Sequência de bytes em <b>hexadecimal</b> de um arquivo binário. Imagem tirada do site <a
+            href="https://pt.wikipedia.org/wiki/Arquivo_bin%C3%A1rio" alt="Wikipedia">Wikipedia</a><sup>&copy;</sup></font>
+      </q>
+      <h2>Conversão entre Decimal e Hexadecimal</h2>
+      <p>
+        É necessário fazer a divisão do número no sistema decimal por 16 e guardar o resultado da divisão (trocando os restos 10, 11, 12, 13, 14 e 15, por A, B, C, D, E e F). Em seguinte, repita a
+        divisão do resultado da primeira divisão por 16 até não houver mais restos. Assim, os restos das divisões efetuadas de
+        trás para frente será o valor decimal em hexadecimal. <br>
+        <br>Exemplo:ㅤ127 / 16 = 7, resto F;
+        <br>ㅤㅤㅤㅤㅤ(127)<sub>10</sub> = (7F)<sub>16</sub>
+        <br>
+        <br>ㅤㅤㅤㅤㅤ1440 / 16 = 90, resto 0;
+        <br>ㅤㅤㅤㅤㅤ90 / 16 = 5, resto A;
+        <br>ㅤㅤㅤㅤㅤ(1440)<sub>10</sub> = (7F)<sub>16</sub> 
+      </p>
+      <h2>Conversão de Hexadecimal para Decimal</h2>
+      <p>
+        Cada dígito da base hexadecimal deve ser multiplicado pelas potências de base 16.
+        Após, deve somar os resultados e assim, terá o valor no sistema decimal.
+        <br />
+        <br />Exemplo:ㅤ(2B1)<sub>16</sub> = 2 x 16<sup>2</sup> + 11 x 16<sup>1</sup> + 1 x 16<sup>0</sup>; <br />ㅤㅤㅤㅤㅤ(2B1)<sub>16</sub>
+        = 512 + 176 + 1; <br>ㅤㅤㅤㅤㅤ(2B1)<sub>16</sub> = (689)<sub>10</sub>
+      </p>
+      <h2>Conversão direta entre o Sistema Binário e o Sistema Hexadecimal</h2>
+      <table width="550">
+        <tr>
+          <th colspan="17">Tabela de Equivalência</th>
+        </tr>
+        <tr align="center"></tr>
+        <th>Binário</th>
+        <td>0000</td>
+        <td>0001</td>
+        <td>0010</td>
+        <td>0011</td>
+        <td>0100</td>
+        <td>0101</td>
+        <td>0110</td>
+        <td>0111</td>
+        <td>1000</td>
+        <td>1001</td>
+        <td>1010</td>
+        <td>1011</td>
+        <td>1100</td>
+        <td>1101</td>
+        <td>1110</td>
+        <td>1111</td>
+                
+        </tr>
+        <tr align="center">
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+          <td>↓</td>
+
+        </tr>
+        <tr align="center">
+          <th>Hexadecimal</th>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+          <td>D</td>
+          <td>E</td>
+          <td>F</td>
+        </tr>
+      </table>
+      <p>Exemplos: (10101101)<sub>2</sub> = (1010)<sub>2</sub> (1101)<sub>2</sub>
+      <br> ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ↓ ㅤㅤㅤㅤ↓
+      <br>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤAㅤㅤㅤㅤD
+      ㅤ=ㅤ(AD)<sub>16</sub>
+      <br>ㅤㅤㅤㅤㅤ(101011)<sub>2</sub> = (0010)<sub>2</sub> (1011)<sub>2</sub>
+      <br> ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ↓ ㅤㅤㅤㅤ↓
+      <br>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ3ㅤㅤㅤㅤB
+      ㅤ=ㅤ(2B)<sub>16</sub>
+      <br>ㅤㅤㅤㅤㅤ(10011)<sub>2</sub> = (0001)<sub>1</sub> (0011)<sub>2</sub>
+      <br> ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ↓ ㅤㅤㅤㅤ↓
+      <br>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ1ㅤㅤㅤㅤ3
+      ㅤ=ㅤ(13)<sub>16</sub>
+      
+      <h2>Tabela do Sistema Hexadecimal com os outros Sistemas</h2>
+      <table width="1150">
+        <tr>
+          <th>Binário</th>
+          <th>Octal</th>
+          <th>Decimal</th>
+          <th>Hexadecimal</th>
+        </tr>
+        <tr>
+          <td><i>Base 2</i></td>
+          <td><i>Base 8</i></td>
+          <td><i>Base 10</i></td>
+          <td><i>Base 16</i></td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>3</td>
+          <td>3</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>4</td>
+          <td>4</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>101</td>
+          <td>5</td>
+          <td>5</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>110</td>
+          <td>6</td>
+          <td>6</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>7</td>
+          <td>7</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>1000</td>
+          <td>10</td>
+          <td>8</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>1001</td>
+          <td>11</td>
+          <td>9</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>1010</td>
+          <td>12</td>
+          <td>10</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>1011</td>
+          <td>13</td>
+          <td>11</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>1100</td>
+          <td>14</td>
+          <td>12</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td>1101</td>
+          <td>15</td>
+          <td>13</td>
+          <td>D</td>
+        </tr>
+        <tr>
+          <td>1110</td>
+          <td>16</td>
+          <td>14</td>
+          <td>E</td>
+        </tr>
+        <tr>
+          <td>1111</td>
+          <td>17</td>
+          <td>15</td>
+          <td>F</td>
+        </tr>
+      </table>
+      <br>
+      <p align="center"><a href="index.html"><font size="3">Voltar para a página inicial</font></a></p>
+      <p align="right">
+        <font size="2">
+          <b>Feito pelo estudante
+            <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
+          </b>
+          <br>Instituto Federal de Educação,Ciência e Tecnologia do Rio Grande do Sul - Campus Erechim
+        </font>
+    </font>
+  </body>
+</html>
