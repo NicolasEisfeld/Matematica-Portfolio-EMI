@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-color: #f1faff;
+    --background: #343434;
+    --menu: #222222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    transition: 0.2 linear;
+}
+
+.Trimester {
+    align-items: left;
+    justify-content: left;
+    min-width: 20rem;
+    color: var(--main-color);
+    background-color: var(--background);
+    font-family: Hanken Grotesk;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    word-spacing: 0.125rem;
+    letter-spacing: 0.019rem;
+    margin: 5rem 4rem;
+}
+.menu-header {
+    position: fixed;
+    z-index: 99;
+    border-bottom: var(--main-color);
+    background-color: var(--menu);
+    top: 0;
+    right: 0;
+    left: 0;
+    
+}
+
+.menu-header section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.menu-header a {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.nav-bar a {
+    color: var(--main-color);
+    border-bottom: var(--main-color);
+}
+h1 {
+    color: var(--main-color);
+    font-family: Montserrat;
+    font-size: 3.5rem;
+    margin: 6.063rem 0rem 0.125rem;
+}
+h2 {
+    color: var(--main-color);
+    font-family: JetBrains Mono;
+    font-size: 2.3rem;
+    margin: 2.25rem 1.125rem 1.75rem 0rem;
+}
+
+h3 {
+    color: var(--main-color);
+    font-family: JetBrains Mono;
+    font-size: 1.7rem;
+    margin: 2.25rem 1rem 1.75rem 0rem;
+}
+.label {
+    font-family: Hanken Grotesk;
+    font-size: 0.9rem;
+}
+
+.content {
+    margin: 0.938rem 0rem 0rem
+}
+
+summary {
+    all: unset;
+    padding: 1rem;
+    color:#f1faff;
+    background-color: #222222;
+    font-size: 2rem;
+    width: 100%;
+}
+
+details {
+    background-color: #303030;
+    color:#f1faff;
+    margin-right: 2.625rem;
+    
+}
+ul {
+    margin-left: 2rem;
+    padding: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.375rem;
+}
+
+li + li{
+    margin-top: 0.25rem;
+}
+
+#Copyright {
+    font-family: JetBrains Mono;
+    font-size: 0.875rem;
+}
+
+ 
