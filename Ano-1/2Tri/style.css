@@ -110,6 +110,13 @@ ul {
 li + li{
     margin-top: 0.25rem;
 }
+.index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+
+}
 
 #Copyright {
     font-family: JetBrains Mono;
