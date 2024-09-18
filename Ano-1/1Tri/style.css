@@ -20,6 +20,7 @@
 .Trimester {
     align-items: left;
     justify-content: left;
+    text-align: justify;
     min-width: 20rem;
     color: var(--main-color);
     background-color: var(--background);
