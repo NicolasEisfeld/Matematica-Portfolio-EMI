@@ -20,6 +20,7 @@
 .Trimester {
     align-items: left;
     justify-content: left;
+    text-align: justify;
     min-width: 20rem;
     color: var(--main-color);
     background-color: var(--background);
@@ -106,16 +107,12 @@ ul {
     padding-bottom: 1rem;
     font-size: 1.375rem;
 }
+li {
+    list-style: none;
+}
 
 li + li{
     margin-top: 0.25rem;
-}
-.index {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-
 }
 
 #Copyright {
