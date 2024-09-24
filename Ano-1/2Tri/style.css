@@ -120,4 +120,17 @@ li + li{
     font-size: 0.875rem;
 }
 
- 
+ #formula {
+     font-size: 15px;
+ }
+
+ math {
+    font-family: arial;
+    font-size: 1.2rem;
+    word-spacing: 0.125rem;
+    letter-spacing: 0.2rem;
+ }
+
+ mn {
+    size: 1rem;
+ }
