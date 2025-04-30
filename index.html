@@ -9,7 +9,7 @@
 </head>
 
 <header class="menu-header">
-<!--Navegador-->
+  <!--Navegador-->
   <section class="nav">
     <nav class="nav-bar">
       <a href="#home" id="home-nav">Home</a>
@@ -17,11 +17,11 @@
       <a href="#credits" id="credits-nav">Créditos</a>
     </nav>
   </section>
-  
+
 </header>
 
 <body class="page" link="#a1aaaa" vlink="#8879ff">
-<!--Titulo do Portfolio-->
+  <!--Titulo do Portfolio-->
   <section class="header" id="home">
     <div class="animation-math">
       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" align="left">
@@ -34,39 +34,49 @@
       <div class="title">
         <h1 align="left" id="material-name"><b>Portfólio de Matemática</b></h1>
       </div>
-      <div class="subtitle">   
-        <h2 align="left" id="description" class="teste"><h2 align="left" id="description" class="teste">EMI - Informática<br>Nicolas Eisfeld Ferreira</h2></h2>
+      <div class="subtitle">
+        <h2 align="left" id="description" class="teste" data-text="EMI - Informática[[BR]]Nicolas Eisfeld Ferreira">
+        </h2>
         <script>
-          function typeWriter(element, text) {
+          function typeWriter(element, rawText) {
+            const parts = rawText.split('[[BR]]');
+            const fullText = parts.join('\n'); // Usado apenas internamente
             let i = 0;
+
             function type() {
-              if (i < text.length) {
-                if (text[i] === '\n') {
+              if (i < fullText.length) {
+                if (fullText[i] === '\n') {
                   element.innerHTML += '<br>';
                 } else {
-                  element.innerHTML += text[i];
+                  element.innerHTML += fullText[i];
                 }
                 i++;
                 setTimeout(type, 75);
               }
             }
+
             type();
           }
-        
+
           const title = document.querySelector('#description');
-          const text = title.getAttribute('data-text');
+          const text = title.dataset.text;
           typeWriter(title, text);
         </script>
+
       </div>
     </td>
     <hr>
     <!--Introdução-->
-    <p class="introduction">Este é meu memorial de estudos de Matemática, do meu curso de Informática integrado ao Ensino
-      Médio. Nele, está todos os conteúdos <b>estudados</b> durante o curso, abordando de forma coesa e facilitada com o intuito
+    <p class="introduction">Este é meu memorial de estudos de Matemática, do meu curso de Informática integrado ao
+      Ensino
+      Médio. Nele, está todos os conteúdos <b>estudados</b> durante o curso, abordando de forma coesa e facilitada com o
+      intuito
       de <b>simplificar</b> e apresentar os meus estudos de matemática numa linguagem <b>juvenil e própria do
         estudante</b>, como também, a utilização dos conteúdos estudados pelo estudante na aplicação de <b>competições e
-      olimpíadas científicas</b> na área de exatas do interesse do aluno e na <b>qualificação e aprendizado</b> das demais áreas de
-      interesse que se relacionam com a matemática, como a estatística computacional na <b>Ciência de Dados e Computação</b>.
+        olimpíadas científicas</b> na área de exatas do interesse do aluno e na <b>qualificação e aprendizado</b> das
+      demais áreas de
+      interesse que se relacionam com a matemática, como a estatística computacional na <b>Ciência de Dados e
+        Computação</b>.
     </p>
   </section>
   <!--Conteúdos-->
@@ -77,12 +87,12 @@
       <details>
         <summary>1º Ano Letivo:</summary>
         <ul>
-          <li><a href="Ano-1/1Tri/1Tri.html"alt="Ano1-1Trimestre">1º Trimestre</a></li>
-          <li><a href="Ano-1/2Tri/2Tri.html"alt="Ano1-2Trimestre">2º Trimestre</a></li>
-          <li><a href="https://nicolaseisfeld.my.canva.site/ano-1tri-3"alt="Ano1-3Trimestre">3º Trimestre</a></li>
+          <li><a href="Ano-1/1Tri/1Tri.html" alt="Ano1-1Trimestre">1º Trimestre</a></li>
+          <li><a href="Ano-1/2Tri/2Tri.html" alt="Ano1-2Trimestre">2º Trimestre</a></li>
+          <li><a href="https://nicolaseisfeld.my.canva.site/ano-1tri-3" alt="Ano1-3Trimestre">3º Trimestre</a></li>
         </ul>
       </details>
-      
+
     </div>
     <br>
     <div class="year-2">
@@ -105,21 +115,21 @@
           <li><a href="Ano-3/3Tri/3Tri.html" alt="Ano3-3Trimestre">3º Trimestre</a></li>
         </ul>
       </details>
-      
+
     </div>
   </section>
   <br>
   <!--Rodapé-->
   <section class="footer" id="credits">
-    
-        <br>
-        <p align="right" id="Copyright">
-          <!--Autor-->
-          <b>Feito pelo estudante
-            <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
-          </b>
-          <br />Instituto Federal de Educação,Ciência e Tecnologia do Rio Grande
-          do Sul - Campus Erechim
-        </p>
+
+    <br>
+    <p align="right" id="Copyright">
+      <!--Autor-->
+      <b>Feito pelo estudante
+        <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
+      </b>
+      <br />Instituto Federal de Educação,Ciência e Tecnologia do Rio Grande
+      do Sul - Campus Erechim
+    </p>
   </section>
 </body>
