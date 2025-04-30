@@ -20,7 +20,7 @@
   
 </header>
 
-<body class="page" link="#8879ff" vlink="#8879ff">
+<body class="page" link="#a1aaaa" vlink="#8879ff">
 <!--Titulo do Portfolio-->
   <section class="header" id="home">
     <div class="animation-math">
@@ -35,17 +35,27 @@
         <h1 align="left" id="material-name"><b>Portfólio de Matemática</b></h1>
       </div>
       <div class="subtitle">   
-        <h2 align="left" id="description" class="teste">EMI - Informática Nicolas Eisfeld Ferreira</h2>
+        <h2 align="left" id="description" class="teste"><h2 align="left" id="description" class="teste">EMI - Informática<br>Nicolas Eisfeld Ferreira</h2></h2>
         <script>
-          function typeWriter(element) {
-            const textArray = element.innerHTML.split('');
-            element.innerHTML = '';
-            textArray.forEach((letter, i) => {
-             setTimeout(() => element.innerHTML += letter, 75 * i);
-            });
+          function typeWriter(element, text) {
+            let i = 0;
+            function type() {
+              if (i < text.length) {
+                if (text[i] === '\n') {
+                  element.innerHTML += '<br>';
+                } else {
+                  element.innerHTML += text[i];
+                }
+                i++;
+                setTimeout(type, 75);
+              }
+            }
+            type();
           }
+        
           const title = document.querySelector('#description');
-          typeWriter(title);
+          const text = title.getAttribute('data-text');
+          typeWriter(title, text);
         </script>
       </div>
     </td>
