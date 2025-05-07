@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>1º Trimestre</title>
+  </head>
+
+  <body link="#a1aaaa" vlink="#8879ff" class="Trimester">
+    <header class="menu-header">
+      <section class="nav">
+        <nav class="nav-bar">
+          <a href="1Tri.html" id="pag1-nav">Página Inicial</a>
+          <a href="pag2.html" id="pag2-nav">Matrizes</a>
+          <a href="pag3.html" id="pag3-nav">Determinantes</a>
+        </nav>
+      </section>
+    </header>
+
+    <hr />
+    <h1 align="center" class="title-tri1">Primeiro Trimestre</h1>
+    <h2 class="introduction-tri1">Introdução</h2>
+    <p>O campo da Estatística pode ser separada em duas subáreas:
+        <br /><b>Descritiva</b>: Analisa e organiza os dados em tabelas ou gráficos. Analisa de forma superficial o cenário atual através das informações obtidas por dados.
+        <br /><b>Inferencial</b>: Analisa de forma preventiva e auxilia na tomada de decisões. Tenta prever o que pode ocorrer através de informações obtidas por dados.
+    </p>
+    <br />
+    <div class="summary-1tri">
+      <summary>Sumário - Estatística</summary>
+      <ul>
+        <li><a href="#1li">Média, Moda e Mediana</a></li>
+        <li><a href="#2li">Medidas de Dispersão</a></li>
+        <ul>
+            <li><a href="#3li">Amplitude Geral e Desvio Médio</a></li>
+            <li><a href="#4li">Variância e Desvio Padrão</a></li>
+            <li><a href="#5li">Coeficiente de Variação</a></li>
+        </ul>
+      </ul>
+   </div>
+    <br />
+    <div class="basic-statistics">
+      <h2 id="1li">Média, Moda e Mediana</h2>
+      <p><b>Média Aritmética Simples:</b> </p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mrow>
+          <mi>M</mi>
+          <mo>=</mo>
+          <mfrac>
+            <mpadded depth="0.6em">
+                <mrow>
+                <mo>&#x2211;</mo>
+                <msub>
+                    <mi>x</mi>
+                    <mi>i</mi>
+                </msub>
+                </mrow>
+            </mpadded>
+            <mpadded height="1em">
+                <mi>n</mi>
+            </mpadded>
+          </mfrac>
+        </mrow>
+      </math>
+      <p><b>Média Aritmética Ponderada:</b></p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mrow>
+          <mi>M</mi>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mo>&#x2211;</mo>
+              <mo>(</mo>
+              <msub><mi>x</mi><mi>i</mi></msub>
+              <mo>&#x22C5;</mo>
+              <msub><mi>w</mi><mi>i</mi></msub>
+              <mo>)</mo>
+            </mrow>
+            <mrow>
+              <mo>&#x2211;</mo>
+              <msub><mi>w</mi><mi>i</mi></msub>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      
+      
+      <p><b>Moda:</b> O valor que mais se repete no conjunto de valores.</p>
+
+      <p><b>Mediana:</b> O valor do "meio" do conjunto. Se o número de valores do conjunto for par, a Mediana será a divisão entre os dois valores do meio.</p>
+      
+    </div>
+
+    <div class="dispersion-measures">
+        <h2 id="2li">Medidas de Dispersão</h2>
+        <h3 id="3li">Amplitude Geral e Desvio Médio</h3>
+        <p><b>Amplitude Geral:</b></p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mrow>
+              <mi>A</mi>
+              <mo>=</mo>
+              <msub>
+                <mi>x</mi>
+                <mtext>máx</mtext>
+              </msub>
+              <mo>&#x2212;</mo>
+              <msub>
+                <mi>x</mi>
+                <mtext>mín</mtext>
+              </msub>
+            </mrow>
+          </math>
+          
+        <br />
+        <p><b>Desvio Médio:</b> É a média aritmética da diferença entre cada elemento e a média do conjunto.</p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mi>DM</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mn>1</mn>
+              <mi>n</mi>
+            </mfrac>
+            <msubsup>
+              <mo>&#x2211;</mo>
+              <mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow>
+              <mi>n</mi>
+            </msubsup>
+            <mo>|</mo>
+            <msub>
+              <mi>x</mi>
+              <mi>i</mi>
+            </msub>
+            <mo>-</mo>
+            <mover>
+              <mi>x</mi>
+              <mo>&#x00AF;</mo>
+            </mover>
+            <mo> |</mo>
+          </math>
+        <h3 id="4li">Variância e Desvio Padrão</h3>
+        <p><b>Variância:</b></p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mrow>
+              <msup>
+                <mi>V ou &#x03C3;</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mo>&#x2211;</mo>
+                  <mo>(</mo>
+                  <msub><mi>x</mi><mi>i</mi></msub>
+                  <mo>&#x2212;</mo>
+                  <mi>&#x03BC;</mi>
+                  <msup><mo>)</mo><mn>2</mn></msup>
+                </mrow>
+                <mpadded height="0.7em">
+                    <mi>n</mi>
+                </mpadded>
+              </mfrac>
+            </mrow>
+        </math>
+        <p><b>Desvio Padrão:</b></p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mrow>
+                    <mi>D</mi>
+                    <mi>P</mi>
+              <mo>=</mo>
+              <msqrt>
+                <mfrac>
+                  <mrow>
+                    <mo>&#x2211;</mo>
+                    <mo>(</mo>
+                    <msub><mi>x</mi><mi>i</mi></msub>
+                    <mo>&#x2212;</mo>
+                    <mi>&#x03BC;</mi>
+                    <msup><mo>)</mo><mn>2</mn></msup>
+                  </mrow>
+                  <mi>n</mi>
+                </mfrac>
+              </msqrt>
+            </mrow>
+          </math>
+          
+          
+        <h3 id="5li">Coeficiente de Variação</h3>
+        <p><b>Coeficiente de Variação:</b></p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mrow>
+              <mi>CV</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mi>DP</mi>
+                <mpadded height="0.7em">
+                    <mi>&#x03BC;</mi>
+                </mpadded>
+              </mfrac>
+              <mo>&#x00D7;</mo>
+              <mn>100</mn>
+              <mo>%</mo>
+            </mrow>
+          </math>          
+    </div>
+    <br />
+    <a class="index" href="1Tri.html"
+      >Voltar para a Apresentação do Trimestre</a
+    >
+    <footer>
+      <br />
+      <p align="right" id="Copyright">
+        <b
+          >Feito pelo estudante
+          <a href="https://www.github.com/NicolasEisfeld/"
+            >Nicolas Eisfeld Ferreira</a
+          ><sup>&copy;</sup>
+        </b>
+        <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
+        do Sul - Campus Erechim
+      </p>
+    </footer>
+  </body>
+</html>
