@@ -61,6 +61,7 @@
 h1 {
     color: var(--main-color);
     font-family: Montserrat;
+    height: 100%;
     font-size: 3.5rem;
     margin: 6.063rem 0rem 0.125rem;
 }
