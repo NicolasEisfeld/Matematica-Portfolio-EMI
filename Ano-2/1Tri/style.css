@@ -121,7 +121,16 @@ li + li{
 
 }
 
+.code {
+    background-color: var(--menu);
+    padding: 1rem;
+    border-radius: 3.5%;
+}
+
+
+
 #Copyright {
+
     font-family: JetBrains Mono;
     font-size: 0.875rem;
 }

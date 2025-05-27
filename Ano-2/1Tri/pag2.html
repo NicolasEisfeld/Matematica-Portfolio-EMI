@@ -1,63 +1,337 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-    <title>1º Trimestre</title>
-  </head>
 
-  <body link="#a1aaaa" vlink="#8879ff" class="Trimester">
-    <header class="menu-header">
-      <section class="nav">
-        <nav class="nav-bar">
-          <a href="1Tri.html" id="1tri-nav">Página Inicial</a>
-          <a href="pag1.html" id="pag1-nav">Estatística Básica</a>
-          <a href="pag3.html" id="pag3-nav">Determinantes</a>
-        </nav>
-      </section>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <title>1º Trimestre</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
 
-    <hr />
-    <h1 align="center" class="title-tri1">Matrizes</h1>
-    <h2 class="introduction-tri1">Introdução</h2>
-    <p>As Matrizes são conjuntos de dados numéricos, separados por linhas e colunas (como uma tabela). Esta forma de estrutura matemática está muito presente em diversas áreas, especialmente na computação.</p>
-    <code>int lista[] = new int[i]; // Vetor</code>
-    <code>int valores[][] = new int [i][j] // Matriz (sendo i a quantidade de linhas e j a quantidade de colunas) </code>
+<body link="#a1aaaa" vlink="#8879ff" class="Trimester">
+  <header class="menu-header">
+    <section class="nav">
+      <nav class="nav-bar">
+        <a href="1Tri.html" id="1tri-nav">Página Inicial</a>
+        <a href="pag1.html" id="pag1-nav">Estatística Básica</a>
+        <a href="pag3.html" id="pag3-nav">Determinantes</a>
+      </nav>
+    </section>
+  </header>
+
+  <hr />
+  <h1 align="center" class="title-tri1">Matrizes</h1>
+  <h2 class="introduction-tri1">Introdução</h2>
+  <p>As Matrizes são conjuntos de dados numéricos, separados por linhas e colunas (como uma tabela). Esta forma de
+    estrutura matemática está muito presente em diversas áreas, especialmente na computação.</p>
+  <br />
+  <div class="code">
+    <p><b>Declaração de um vetor e de uma matriz em Java</b></p>
+    <code>int lista[] = new int[i]; // Vetor</code> <br />
+
+    <code>int valores[][] = new int [i][j] // Matriz <br>(sendo i a quantidade de linhas e j a quantidade de colunas) </code>
+  </div>
+  <br /> <br />
+  <div class="summary-1tri">
+    <summary>Sumário - Matrizes</summary>
+    <ul>
+      <li><a href="#1li">Operações com Matrizes</a></li>
+      <ul>
+        <li><a href="#2li">Adição e Subtração</a></li>
+        <li><a href="#3li">Produto p/escalar ou por Matriz</a></li>
+      </ul>
+      <li><a href="#4li">Transposição de Matrizes</a></li>
+      <li><a href="#5li">Transformações Gráficas</a></li>
+      <ul>
+        <li><a href="#6li">Translação</a></li>
+        <li><a href="#7li">Reflexão</a></li>
+        <li><a href="#8li">Rotação</a></li>
+        <li><a href="#9li">Escala</a></li>
+      </ul>
+    </ul>
     <br />
-    <div class="summary-1tri">
-        <summary>Sumário - Matrizes</summary>
-        <ul>
-          <li><a href="#1li">Operações com Matrizes</a></li>
-          <ul>
-              <li><a href="#2li">Adição e Subtração</a></li>
-              <li><a href="#3li">Produto p/escalar ou por Matriz</a></li>
-          </ul>
-          <li><a href="#3li">Transposição e Transformações Gráficas</a></li>
-          <ul>
-              <li><a href="#4li">Transposição de Matrizes</a></li>
-              <li><a href="#5li">Translação</a></li>
-              <li><a href="#6li">Reflexão</a></li>
-              <li><a href="#7li">Rotação</a></li>
-              <li><a href="#8li">Escala</a></li>
-          </ul>
-        </ul>
+    <h2 id="1li">Operações com Matrizes</h2>
+    <p>
+      Podemos realizar diversas operações básicas que já conhecemos na aritmética dos valores comuns, porém agora com as
+      matrizes.
+    </p>
+    <h3 id="2li">Adição</h3>
+    <p> <!--Biblioteca MathJax em LaTeX-->
+      $$
+      \left[
+      \begin{array}{ccc}
+      3 & 5 & 7 \\
+      2 & 6 & 4 \\
+      8 & 1 & 9
+      \end{array}
+      \right]
+      +
+      \left[
+      \begin{array}{ccc}
+      4 & 2 & 1 \\
+      5 & 3 & 7 \\
+      0 & 9 & 2
+      \end{array}
+      \right]
+      =
+      \left[
+      \begin{array}{ccc}
+      7 & 7 & 8 \\
+      7 & 9 & 11 \\
+      8 & 10 & 11
+      \end{array}
+      \right]
+      $$
+    </p>
+    <h3>Subtração</h3>
+    <p>
+      $$
+      \left[
+      \begin{array}{ccc}
+      5 & 8 & 3 \\
+      2 & 7 & 4 \\
+      6 & 1 & 9
+      \end{array}
+      \right]
+      -
+      \left[
+      \begin{array}{ccc}
+      1 & 3 & 2 \\
+      4 & 5 & 1 \\
+      0 & 2 & 7
+      \end{array}
+      \right]
+      =
+      \left[
+      \begin{array}{ccc}
+      4 & 5 & 1 \\
+      -2 & 2 & 3 \\
+      6 & -1 & 2
+      \end{array}
+      \right]
+      $$
+    </p>
+
+    <h2 id="3li">Multiplicação</h2>
+    <h3>Entre Escalar e Matriz</h3>
+    <p>
+      O valor escalar irá multiplicar todos os valores da matriz.
+    </p>
+    <p>
+      $$
+      3 \cdot
+      \left[
+      \begin{array}{ccc}
+      2 & -1 & 4 \\
+      0 & 5 & -3 \\
+      7 & 2 & 1
+      \end{array}
+      \right]
+      =
+      \left[
+      \begin{array}{ccc}
+      6 & -3 & 12 \\
+      0 & 15 & -9 \\
+      21 & 6 & 3
+      \end{array}
+      \right]
+      $$
+    </p>
+    <h3>Entre Matrizes</h3>
+    <p>
+      Para esse tipo de multiplicação, é necessário que o número de <b>colunas</b> da <b>1ª Matriz</b> seja igual ao
+      número de <b>linhas</b> da <b>2ª Matriz</b>. Dessa forma, faça os produtos entre as linhas da primeira matriz e as
+      colunas da segunda matriz e some tudo para que fique somente uma célula como resultado, como no exemplo abaixo.
+    </p>
+    <p>
+      $$
+      \left[
+      \begin{array}{ccc}
+      1 & 2 & 3 \\
+      4 & 5 & 6
+      \end{array}
+      \right]
+      \cdot
+      \left[
+      \begin{array}{cc}
+      7 & 8 \\
+      9 & 10 \\
+      11 & 12
+      \end{array}
+      \right]
+      =
+      \left[
+      \begin{array}{cc}
+      58 & 64 \\
+      139 & 154
+      \end{array}
+      \right]
+      $$
+    </p>
+    <p>
+      Nesse caso, foi realizado o produto de uma matriz 2x3 e 3x2, o que gerou uma matriz 2x2, sendo cada célula dessa
+      matriz resultante, o produto entre a linha da primeira matriz e a coluna da segunda matriz.
+    </p>
     <br />
-    <a class="index" href="1Tri.html"
-      >Voltar para a Apresentação do Trimestre</a
-    >
+    <h3 id="4li">Transposição de Matrizes</h3>
+    <p>É basicamente inverter as linhas e colunas de uma matriz. Sendo assim, uma matriz transposta é a matriz com as
+      linhas sendo as colunas e as colunas sendo as linhas.</p>
+    <p>
+      $$
+      \left[
+      \begin{array}{ccc}
+      4 & 7 & 2 \\
+      0 & 5 & -1
+      \end{array}
+      \right]^T
+      =
+      \left[
+      \begin{array}{cc}
+      4 & 0 \\
+      7 & 5 \\
+      2 & -1
+      \end{array}
+      \right]
+      $$
+    </p>
+    <h2 id="5li">Transformações Gráficas</h2>
+    <p>As transformações gráficas são aplicações nas matrizes que são utilizadas em áreas como computação gráfica,
+      engenharia, física, economia, entre outros. Essas transformações relacionam os valores de uma matriz com as
+      coordenadas de um plano cartesiano, criando formas geometrícas que podemos transformar graficamente.</p>
+
+    <h3 id="6li">Translação</h3>
+    <p>
+      Para transladar um ponto \((x, y)\) por \((t_x, t_y)\), usa-se a matriz:
+    </p>
+    \[
+    T = \begin{bmatrix}
+    1 & 0 & t_x \\
+    0 & 1 & t_y \\
+    0 & 0 & 1
+    \end{bmatrix}
+    \]
+
+
+    <b>
+      <p>Para transladar o ponto \((2, 3)\) para \((4, -1)\):
+    </b></p>
+
+    <p>Ponto em coordenadas homogêneas:</p>
+    \[
+    P = \begin{bmatrix} 2 \\ 3 \\ 1 \end{bmatrix}
+    \]
+
+    <p>Matriz de translação:</p>
+    \[
+    T = \begin{bmatrix}
+    1 & 0 & 4 \\
+    0 & 1 & -1 \\
+    0 & 0 & 1
+    \end{bmatrix}
+    \]
+
+    <p>Multiplicando as matrizes: \(T \cdot P\)</p>
+    \[
+    T \cdot P =
+    \begin{bmatrix}
+    1 & 0 & 4 \\
+    0 & 1 & -1 \\
+    0 & 0 & 1
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix} 2 \\ 3 \\ 1 \end{bmatrix}
+    =
+    \begin{bmatrix}
+    1 \times 2 + 0 \times 3 + 4 \times 1 \\
+    0 \times 2 + 1 \times 3 + (-1) \times 1 \\
+    0 \times 2 + 0 \times 3 + 1 \times 1
+    \end{bmatrix}
+    =
+    \begin{bmatrix} 6 \\ 2 \\ 1 \end{bmatrix}
+    \]
+
+    <p>Dessa forma, O ponto \((2, 3)\) transladado por \((4, -1)\) é \(\boxed{(6, 2)}\).</p>
+
+    <h3 id="7li">Reflexão</h3>
+    <p>A reflexão basicamente faz a forma refletir para o outro lado do eixo, invertendo o sinal da respectiva célula. Como podemos ver nos exemplos, essa transformação consiste somente em mudar o sinal dos valores.</p>
+    <b>Matriz de Reflexão no eixo X e no eixo Y:</b>
+    \[
+    R_x = \begin{bmatrix}
+    1 & 0 \\
+    0 & -1
+    \end{bmatrix}
+    \]
+
+    \[
+    R_y = \begin{bmatrix}
+    -1 & 0 \\
+    0 & 1
+    \end{bmatrix}
+    \]
+
+    <b>Exemplo com ponto (3, 4):</b>
+
+    <p>Reflexão no eixo X:</p>
+    \[
+    R_x \cdot \begin{bmatrix}3 \\ 4\end{bmatrix} =
+    \begin{bmatrix}
+    1 & 0 \\
+    0 & -1
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}3 \\ 4\end{bmatrix}
+    =
+    \begin{bmatrix}3 \\ -4\end{bmatrix}
+    \]
+    <p>Resultado: (3, -4)</p>
+
+    <p>Reflexão no eixo Y:</p>
+    \[
+    R_y \cdot \begin{bmatrix}3 \\ 4\end{bmatrix} =
+    \begin{bmatrix}
+    -1 & 0 \\
+    0 & 1
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}3 \\ 4\end{bmatrix}
+    =
+    \begin{bmatrix}-3 \\ 4\end{bmatrix}
+    \]
+    <p>Resultado: (-3, 4)</p>
+    <h3 id="8li">Rotação</h3>
+    <p>Essa transformação seria girar a figura no plano cartesiano \((x, y)\) em torno da origem por um ângulo
+      \(\theta\) (em radianos). Para uma matriz 2x2, deve ser utilizado essa fórmula:</p>
+
+    \[
+    R = \begin{bmatrix}
+    \cos \theta & -\sin \theta \\
+    \sin \theta & \cos \theta
+    \end{bmatrix}
+    \]
+    <h3 id="9li">Escala</h3>
+    <p>A transformação de escala amplia ou reduz a forma geometríca no ponto \((x, y)\) com fatores de escala \(s_x\) e
+      \(s_y\):</p>
+
+    \[
+    S = \begin{bmatrix}
+    s_x & 0 \\
+    0 & s_y
+    \end{bmatrix}
+    \]
+    <a class="index" href="1Tri.html">Voltar para a Apresentação do Trimestre</a>
     <footer>
       <br />
       <p align="right" id="Copyright">
-        <b
-          >Feito pelo estudante
-          <a href="https://www.github.com/NicolasEisfeld/"
-            >Nicolas Eisfeld Ferreira</a
-          ><sup>&copy;</sup>
+        <b>Feito pelo estudante
+          <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
         </b>
         <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
         do Sul - Campus Erechim
       </p>
     </footer>
-  </body>
+</body>
+
 </html>

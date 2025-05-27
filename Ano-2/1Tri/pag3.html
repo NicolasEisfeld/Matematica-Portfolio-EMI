@@ -1,61 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-    <title>1º Trimestre</title>
-  </head>
 
-  <body link="#a1aaaa" vlink="#8879ff" class="Trimester">
-    <header class="menu-header">
-      <section class="nav">
-        <nav class="nav-bar">
-          <a href="1Tri.html" id="1tri-nav">Página Inicial</a>
-          <a href="pag1.html" id="pag1-nav">Estatística Básica</a>
-          <a href="pag2.html" id="pag2-nav">Matrizes</a>
-        </nav>
-      </section>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <title>1º Trimestre</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
 
-    <hr />
-    <h1 align="center" class="title-tri1">Matrizes</h1>
-    <h2 class="introduction-tri1">Introdução</h2>
-    <p>As determinantes são funções que transformam uma matriz em um número escalar. Em outras palavras, define um número para representar uma matriz. </p>
+<body link="#a1aaaa" vlink="#8879ff" class="Trimester">
+  <header class="menu-header">
+    <section class="nav">
+      <nav class="nav-bar">
+        <a href="1Tri.html" id="1tri-nav">Página Inicial</a>
+        <a href="pag1.html" id="pag1-nav">Estatística Básica</a>
+        <a href="pag2.html" id="pag2-nav">Matrizes</a>
+      </nav>
+    </section>
+  </header>
+
+  <hr />
+  <h1 align="center" class="title-tri1">Determinantes</h1>
+  <h2 class="introduction-tri1">Introdução</h2>
+  <p>As determinantes são funções que transformam uma matriz em um número escalar. Em outras palavras, define um número
+    para representar uma matriz. O estudo para compreender o conceito de determinante é somente estudado no ensino
+    superior, nesse portfólio abordo somente o aspecto prático das determinantes.</p>
+  <br />
+  <div class="summary-1tri">
+    <summary>Sumário - Determinantes</summary>
+    <ul>
+      <li><a href="#1li">Determinantes</a></li>
+      <ul>
+        <li><a href="#2li">Em Matrizes 2x2</a></li>
+        <li><a href="#3li">Em Matrizes 3x3</a></li>
+        <li><a href="#3li">Em Matrizes acima de 3x3</a></li>
+      </ul>
+      <li><a href="#4li">Propriedades das Determinantes</a></li>
+      <li><a href="#5li">Equações Matriciais</a></li>
+    </ul>
     <br />
-    <div class="summary-1tri">
-        <summary>Sumário - Determinantes</summary>
-        <ul>
-          <li><a href="#1li">Determinantes</a></li>
-          <ul>
-              <li><a href="#2li">Em Matrizes 2x2</a></li>
-              <li><a href="#3li">Em Matrizes 3x3</a></li>
-              <li><a href="#3li">Em Matrizes acima de 3x3</a></li>
-          </ul>
-          <li><a href="#4li">Propriedades das Determinantes</a></li>
-          <ul>
-              <li><a href="#5li">.</a></li>
-              <li><a href="#6li">.</a></li>
-              <li><a href="#7li">;.</a></li>
-            </ul>
-            <li><a href="#8li">Equações Matriciais</a></li>
-        </ul>
+    <h3 id="1li">Determinantes</h3>
+    <p>Para realizar o cálculo da determinante, é utilizado a multiplicação dos valores das diagonais de uma matriz quadrada, dessa forma, para conseguir a determinante a matriz <b>sempre</b> deve ser quadrada.</p>
+    <p>Nas matrizes de ordem 1, o próprio valor da matriz é a sua determinante.</p>
+    \[
+    A = \begin{bmatrix}
+    a 
+
+    \end{bmatrix}
+    \]
+    \[
+    \text{det}(A) = a 
+    \]
+    <h3 id="2li">Determinantes em Matrizes 2x2</h3>
+    <p>Se faz a multiplicação na Fórmula geral:</p>
+    \[
+    A = \begin{bmatrix}
+    a & b \\
+    c & d
+    \end{bmatrix}
+    \]
+    \[
+    \text{det}(A) = a \cdot d - b \cdot c
+    \]
+
+    <p><b>Exemplo:</b></p>
+    \[
+    A = \begin{bmatrix}
+    3 & 5 \\
+    7 & 2
+    \end{bmatrix}
+    \]
+    \[
+    \text{det}(A) = 3 \cdot 2 - 5 \cdot 7
+    \]
+    \[
+    \text{det}(A) = 6 - 35 = -29
+    \]
+
+    <p>Resultado: <b>-29</b></p>
+
     <br />
-    <a class="index" href="1Tri.html"
-      >Voltar para a Apresentação do Trimestre</a
-    >
+
+    <h3>Em Matrizes 3x2: Regra de Sarrus</h3>
+    <p>Para fazer a multiplicação cruzada, basta acrescentar novamente a 1ª e 2ª linha ao lado da matriz para facilitar a visibilidade das diagonais.<i> Lembre que as diagonais secundárias são com o sinal invertido</i>.</p>
+    <a class="index" href="1Tri.html">Voltar para a Apresentação do Trimestre</a>
     <footer>
       <br />
       <p align="right" id="Copyright">
-        <b
-          >Feito pelo estudante
-          <a href="https://www.github.com/NicolasEisfeld/"
-            >Nicolas Eisfeld Ferreira</a
-          ><sup>&copy;</sup>
+        <b>Feito pelo estudante
+          <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
         </b>
         <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
         do Sul - Campus Erechim
       </p>
     </footer>
-  </body>
+</body>
+
 </html>
