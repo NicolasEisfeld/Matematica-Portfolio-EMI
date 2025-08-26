@@ -6,14 +6,17 @@
     --main-color: #f1faff;
     --background: #343434;
     --menu: #222222;
+    --card-bg: #2a2a2a;
+    --card-hover: #3a3a3a;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: none;
     text-decoration: none;
-    transition: 0.2 linear;
+    transition: all 0.3s ease-in-out;
 }
 
 .page {
@@ -30,6 +33,7 @@
     letter-spacing: 0.019rem;
     margin: 5rem 4rem;
 }
+
 .menu-header {
     position: fixed;
     z-index: 99;
@@ -38,7 +42,6 @@
     top: 0;
     right: 0;
     left: 0;
-    
 }
 
 .menu-header section {
@@ -52,17 +55,28 @@
 .menu-header a {
     margin-right: 1rem;
     margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
 }
+
 .nav-bar a {
     color: var(--main-color);
     border-bottom: var(--main-color);
 }
+
+.nav-bar a:hover {
+    background-color: var(--card-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
 h1 {
     color: var(--main-color);
     font-family: Montserrat;
     font-size: 3.5rem;
     margin: 6.063rem 0rem 0.125rem;
 }
+
 h2 {
     color: var(--main-color);
     font-family: JetBrains Mono;
@@ -77,8 +91,8 @@ h3 {
     margin: 2.25rem 4.75rem 1.75rem 0rem;
 }
 
-a:hover {  
-    color:#787878;
+a:hover {
+    color: #b3b3b3;
 }
 
 h2::after {
@@ -87,16 +101,19 @@ h2::after {
     margin-left: 0.063rem;
     display: inline-block;
     animation: blink .7s infinite;
-  }
+}
 
 @keyframes blink {
-    0%, 100% {
-       opacity: 1;
+
+    0%,
+    100% {
+        opacity: 1;
     }
+
     50% {
-       opacity: 0;
+        opacity: 0;
     }
-  }
+}
 
 .animation-math {
     position: absolute;
@@ -104,98 +121,119 @@ h2::after {
     top: 1rem;
     padding-bottom: 10rem;
     margin: 1.25rem 0rem 10rem;
-    
 }
+
 .line {
-    color: #8473ff ;
+    color: #8473ff;
 }
+
 .introduction {
     margin: 2rem 0rem 8.375rem;
 }
+
 .content {
-    margin: 0.938rem 0rem 0rem
+    margin: 0.938rem 0rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
-summary {
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    background-color: var(--card-hover);
+    transform: translateY(-5px);
+
+}
+
+.card summary {
     all: unset;
     display: block;
     padding: 1rem 1rem;
     color: #f1faff;
-    background-color: #222222;
-    font-size: 2rem;
-    width: 100%;
+    background-color: transparent;
+    font-size: 1.5rem;
     cursor: pointer;
+    font-weight: bold;
 }
 
-details {
-    padding: 0 2rem 0 0;
-    background-color: #303030;
-    color:#f1faff;
-    margin-right: 2.625rem;
-    
-}
-ul {
-    margin-right: 0;
-    padding: 1rem 0;
-    font-size: 1.375rem;
-}
-li {
-    margin-left: 5rem;
-    margin-top :0.5rem;
+.card ul {
+    margin: 0;
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
 }
 
+.card li {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.card a {
+    color: var(--main-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.card a:hover {
+    background-color: var(--menu);
+    color: #fff;
+    transform: scale(1.05);
+}
 
 @media(max-width: 1300px) {
-    
     .animation-math {
-        display:none;
+        display: none;
     }
 
     h2 {
-        margin-right:0px;
+        margin-right: 0px;
     }
 }
-
-
 
 @media (max-width: 768px) {
     .page {
-      margin: 2rem 1rem;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
+        margin: 2rem 1rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
-  
+
     h1 {
-      font-size: 2.7rem;
-      margin: 6rem 1rem 0rem;
-      text-align: center;
+        font-size: 2.7rem;
+        margin: 6rem 1rem 0rem;
+        text-align: center;
     }
-  
+
     h2 {
-      font-size: 1.6rem;
-      margin: 1rem 0;
-      text-align: center;
+        font-size: 1.6rem;
+        margin: 1rem 0;
+        text-align: center;
     }
 
     .introduction {
-      text-align: justify;
-      margin: 1rem 1rem 4rem;
+        text-align: justify;
+        margin: 1rem 1rem 4rem;
     }
-  
-    details, ul, li {
-      margin: 10 auto;
-      text-align: left;
-    }
-  
-    #Copyright {
-      text-align: center;
-    }
-  }
 
-  
+    .card,
+    ul,
+    li {
+        margin: 10 auto;
+        text-align: left;
+    }
+
+    #Copyright {
+        text-align: center;
+    }
+}
+
 #Copyright {
     font-family: JetBrains Mono;
     font-size: 0.875rem;
 }
-
- 
