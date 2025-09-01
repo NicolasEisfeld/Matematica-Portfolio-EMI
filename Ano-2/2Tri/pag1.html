@@ -1,46 +1,415 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>2º Trimestre</title>
-</head>
+  </head>
 
-<body link="#a1aaaa" vlink="#8879ff" class="Trimester">
+  <body link="#a1aaaa" vlink="#8879ff" class="Trimester">
     <header class="menu-header">
-        <section class="nav">
-            <nav class="nav-bar">
-                <a href="index.html" id="1tri-nav">Página Inicial</a>
-                <a href="pag2.html" id="pag2-nav"></a>
-                <a href="pag3.html" id="pag3-nav"></a>
-            </nav>
-        </section>
+      <section class="nav">
+        <nav class="nav-bar">
+          <a href="index.html" id="1tri-nav">Página Inicial</a>
+          <a href="pag2.html" id="pag2-nav"></a>
+          <a href="pag3.html" id="pag3-nav"></a>
+        </nav>
+      </section>
     </header>
 
     <hr />
-    <h1 align="center" class="title-tri2">Estatística Básica</h1>
-    <h2 class="introduction-tri2">Introdução</h2>
-    <p></p>
+    <h1 align="center" class="title-tri2">Sistemas Lineares</h1>
     <br />
+
     <div class="summary-2tri">
-        <summary>Sumário - Estatística</summary>
+      <summary>Sumário - Sistemas Lineares</summary>
+      <ul>
+        <li><a href="#EquaçõesLineares">Equações Lineares</a></li>
+        <li><a href="#SistemasLineares">Sistemas Lineares</a></li>
+        <li><a href="#Classficação">Classficação dos Sistemas</a></li>
+        <li><a href="#Sistemas2x2">Sistemas 2x2</a></li>
+        <li><a href="#Relação">Relação entre Sistemas e Matrizes</a></li>
+        <li><a href="#Sistemas3x3">Sistemas 3x3</a></li>
+      </ul>
     </div>
-    <br />
 
     <br />
-    <a class="index" href="index.html">Voltar para a Apresentação do Trimestre</a>
+
+    <h2 id="EquaçõesLineares">Equações Lineares</h2>
+    <p>
+      São as equações em que sempre as incógnitas tem expoente 1 e não tem
+      multiplicação e divisão entre elas. Assim, esse tipo de equação representa
+      retas ou planos, e os pontos sendo os valores das incógnitas.
+    </p>
+    <p><b>Fórmula Geral</b></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mrow>
+        <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub>
+        <msub>
+          <mi>x</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msub>
+        <msub>
+          <mi>x</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mn>3</mn>
+        </msub>
+        <msub>
+          <mi>x</mi>
+          <mn>3</mn>
+        </msub>
+        <mo>+</mo>
+        <mo>&#8230;</mo>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mi>n</mi>
+        </msub>
+        <msub>
+          <mi>x</mi>
+          <mi>n</mi>
+        </msub>
+        <mo>+</mo>
+        <mi>b</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mrow>
+    </math>
+    <br />
+
+    <h2 id="SistemasLineares">Sistemas Lineares</h2>
+    <p>
+      É o conjunto de equações lineares, que são interligadas através das mesmas
+      incógnitas. Na computação, os sistemas lineares são usados para resolver
+      problemas de otimização, modelar sistemas físicos e de redes, e em
+      computação gráfica para manipular imagens e criar cenas 3D realistas.
+    </p>
+
+    <h2 id="Classficação">Classficação dos Sistemas</h2>
+    <p>
+      Os Sistemas Lineares podem ser dividos em 3 tipos de solução: SPD, SPI e
+      SI.
+    </p>
+    <ul>
+      <li>
+        <p><b>Possível:</b> Possui pelo menos uma solução</p>
+      </li>
+      <ul>
+        <li>Determinado: Somente uma solução. (SPD)</li>
+        <li>Indeterminado: Possui infinitas soluções possíveis. (SPI)</li>
+      </ul>
+      <li>
+        <p><b>Impossível:</b> Não possui solução exata para o sistema. (SI)</p>
+      </li>
+    </ul>
+    <br />
+
+    <h2 id="Sistemas2x2">Sistemas 2x2</h2>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mrow>
+        <mfenced open="{}" close="">
+          <mtable>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mn>1</mn>
+                </msub>
+                <mi>x</mi>
+                <mo>+</mo>
+                <msub>
+                  <mi>b</mi>
+                  <mn>1</mn>
+                </msub>
+                <mi>y</mi>
+                <mo>=</mo>
+                <msub>
+                  <mi>c</mi>
+                  <mn>1</mn>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mn>2</mn>
+                </msub>
+                <mi>x</mi>
+                <mo>+</mo>
+                <msub>
+                  <mi>b</mi>
+                  <mn>2</mn>
+                </msub>
+                <mi>y</mi>
+                <mo>=</mo>
+                <msub>
+                  <mi>c</mi>
+                  <mn>2</mn>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mfenced>
+      </mrow>
+    </math>
+    <br />
+    <br />
+    <p>
+      São os sistemas que possuem somente duas equações lineares, possuindo as
+      mesmas incógnitas. No caso do exemplo acima, as incognítas são <i>a</i>,
+      <i>b</i>, e <i>c</i>. Para solucionar esse tipo de Sistema, possui dois
+      métodos para efetuar:
+    </p>
+    <p><b>Método da Adição:</b></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mrow>
+        <mfenced open="{" close="">
+          <mtable>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mn>1</mn>
+                </msub>
+                <mi>x</mi>
+                <mo>+</mo>
+                <msub>
+                  <mi>b</mi>
+                  <mn>1</mn>
+                </msub>
+                <mi>y</mi>
+                <mo>=</mo>
+                <msub>
+                  <mi>c</mi>
+                  <mn>1</mn>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mn>2</mn>
+                </msub>
+                <mi>x</mi>
+                <mo>+</mo>
+                <msub>
+                  <mi>b</mi>
+                  <mn>2</mn>
+                </msub>
+                <mi>y</mi>
+                <mo>=</mo>
+                <msub>
+                  <mi>c</mi>
+                  <mn>2</mn>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mfenced>
+        <mspace width="1em" />
+        <mo>&#x21D2;</mo>
+        <mspace width="0.5em" />
+        <mtext>Elimina-se uma incógnita:</mtext>
+        <mspace width="0.5em" />
+        <mo>&#x21D2;</mo>
+        <mspace width="0.5em" />
+        <mi>y</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>c</mi>
+              <mn>1</mn>
+            </msub>
+            <msub>
+              <mi>a</mi>
+              <mn>2</mn>
+            </msub>
+            <mo>-</mo>
+            <msub>
+              <mi>c</mi>
+              <mn>2</mn>
+            </msub>
+            <msub>
+              <mi>a</mi>
+              <mn>1</mn>
+            </msub>
+          </mrow>
+          <mrow>
+            <msub>
+              <mi>b</mi>
+              <mn>1</mn>
+            </msub>
+            <msub>
+              <mi>a</mi>
+              <mn>2</mn>
+            </msub>
+            <mo>-</mo>
+            <msub>
+              <mi>b</mi>
+              <mn>2</mn>
+            </msub>
+            <msub>
+              <mi>a</mi>
+              <mn>1</mn>
+            </msub>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+
+    <br />
+    <br />
+
+    <p><b>Método da Substituição:</b></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mrow>
+        <mfenced open="{" close="">
+          <mtable>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mn>1</mn>
+                </msub>
+                <mi>x</mi>
+                <mo>+</mo>
+                <msub>
+                  <mi>b</mi>
+                  <mn>1</mn>
+                </msub>
+                <mi>y</mi>
+                <mo>=</mo>
+                <msub>
+                  <mi>c</mi>
+                  <mn>1</mn>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>a</mi>
+                  <mn>2</mn>
+                </msub>
+                <mi>x</mi>
+                <mo>+</mo>
+                <msub>
+                  <mi>b</mi>
+                  <mn>2</mn>
+                </msub>
+                <mi>y</mi>
+                <mo>=</mo>
+                <msub>
+                  <mi>c</mi>
+                  <mn>2</mn>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mfenced>
+        <mspace width="1em" />
+        <mo>&#x21D2;</mo>
+        <mspace width="0.5em" />
+        <mtext>Isola-se </mtext>
+        <mspace width="0.5em" />
+        <mi>x</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>c</mi>
+              <mn>1</mn>
+            </msub>
+            <mo>-</mo>
+            <msub>
+              <mi>b</mi>
+              <mn>1</mn>
+            </msub>
+            <mi>y</mi>
+          </mrow>
+          <msub>
+            <mi>a</mi>
+            <mn>1</mn>
+          </msub>
+        </mfrac>
+        <mspace width="0.5em" />
+        <mo>&#x21D2;</mo>
+        <mspace width="0.5em" />
+        <mtext>substitui na segunda equação:</mtext>
+        <mspace width="0.5em" />
+        <mo>&#x21D2;</mo>
+        <mspace width="0.5em" />
+        <msub>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msub>
+        <mfenced>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mn>1</mn>
+              </msub>
+              <mo>-</mo>
+              <msub>
+                <mi>b</mi>
+                <mn>1</mn>
+              </msub>
+              <mi>y</mi>
+            </mrow>
+            <msub>
+              <mi>a</mi>
+              <mn>1</mn>
+            </msub>
+          </mfrac>
+        </mfenced>
+        <mo>+</mo>
+        <msub>
+          <mi>b</mi>
+          <mn>2</mn>
+        </msub>
+        <mspace width="0.5em" />
+        <mi>y</mi>
+        <mo>=</mo>
+        <msub>
+          <mi>c</mi>
+          <mn>2</mn>
+        </msub>
+      </mrow>
+    </math>
+
+    <br />
+    <a class="index" href="index.html"
+      >Voltar para a Apresentação do Trimestre</a
+    >
     <footer>
-        <br />
-        <p align="right" id="Copyright">
-            <b>Feito pelo estudante
-                <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
-            </b>
-            <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
-            do Sul - Campus Erechim
-        </p>
+      <br />
+      <p align="right" id="Copyright">
+        <b
+          >Feito pelo estudante
+          <a href="https://www.github.com/NicolasEisfeld/"
+            >Nicolas Eisfeld Ferreira</a
+          ><sup>&copy;</sup>
+        </b>
+        <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
+        do Sul - Campus Erechim
+      </p>
     </footer>
-</body>
-
+  </body>
 </html>
