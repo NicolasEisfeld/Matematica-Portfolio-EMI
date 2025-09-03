@@ -1,66 +1,273 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-    <title>2º Trimestre</title>
-  </head>
 
-  <body link="#a1aaaa" vlink="#8879ff" class="Trimester">
-    <header class="menu-header">
-      <section class="nav">
-        <nav class="nav-bar">
-          <a href="index.html" id="1tri-nav">Página Inicial</a>
-          <a href="pag1.html" id="pag1-nav">Sistemas Lineares</a>
-          <a href="pag3.html" id="pag3-nav">Trigonometria</a>
-        </nav>
-      </section>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <title>2º Trimestre</title>
+</head>
 
-    <hr />
-    <h1 align="center" class="title-tri2">Matrizes Inversas e Criptografia</h1>
+<body link="#a1aaaa" vlink="#8879ff" class="Trimester">
+  <header class="menu-header">
+    <section class="nav">
+      <nav class="nav-bar">
+        <a href="tri2.html" id="1tri-nav">Página Inicial</a>
+        <a href="pag1.html" id="pag1-nav">Sistemas Lineares</a>
+        <a href="pag3.html" id="pag3-nav">Trigonometria</a>
+      </nav>
+    </section>
+  </header>
+
+  <hr />
+  <h1 align="center" class="title-tri2">Matrizes Inversas e Criptografia</h1>
+  <br />
+  <div class="summary-2tri">
+    <summary>Sumário - Estatística</summary>
+    <ul>
+      <li ><a href="#Definição">Definição de Matriz Inversa</a></li>
+      <li><a href="#Método2x2">Método Prático com Matrizes 2x2</a></li>
+      <li><a href="#Método3x3">Método Prático com Matrizes 3x3</a></li>
+      <li><a href="#Criptografia">Criptografia com Matrizes Inversas</a></li>
+    </ul>
+  </div>
+  <br />
+
+  <h2 id="Definição">Definição de Matriz Inversa</h2>
+  $$A \cdot A^{-1} = A^{-1} \cdot A = I_n$$
+
+  <p>
+    A matriz inversa é uma toda matriz quadrada que, quando multiplicada pela
+    matriz original, resulta na matriz identidade. Para que uma matriz tenha
+    inversa, ela deve ser quadrada (mesmo número de linhas e colunas) e o seu
+    determinante deve ser diferente de zero. Na computação, ela é aplicada na
+    resolução de sistemas lineares e equações diferenciais, em gráficos de
+    computador para transformações (como rotação e escala), em criptografia
+    para decodificar mensagens, na análise de dados.
+  </p>
+
+  <h2 id="Método2x2">Método Prático com Matrizes 2x2</h2>
+  <p>
+    Esse método utiliza das propriedadades das matrizes para obter a forma
+    inversa de uma matriz. Diferente do método com sistemas, que é lento e que
+    pode acarretar em diversos erros, o método prático foi o único utilizado
+    em aula e é o recomendado para descobrir a matriz inversa. Para realizar
+    esse método, deve seguir os seguintes passos:
+  </p>
+  <br />
+  <ol>
+    <li>Calcular o determinante da matriz.</li>
+    <li>Trocar os elementos da diagonal principal de lugar.</li>
+    <li>Mudar o sinal dos elementos da diagonal secundária.</li>
+    <li>
+      Multiplicar todos os elementos da nova matriz pelo inverso do
+      determinante.
+    </li>
+  </ol>
+
+  <p><b>Exemplo:</b></p>
+  \[ A=\begin{bmatrix}4 & -2\\[4pt] 1 & 3\end{bmatrix} \] \[ \text{1)
+  Determinante:}\quad \det(A)=4\cdot 3 - (-2)\cdot 1 = 12 + 2 = 14 \] \[
+  \text{2) Troca da diagonal principal:}\quad \begin{bmatrix}4 & -2\\[4pt] 1 &
+  3\end{bmatrix} \;\longrightarrow\; \begin{bmatrix}3 & -2\\[4pt] 1 &
+  4\end{bmatrix} \] \[ \text{3) Mudança de sinal da diagonal secundária:}\quad
+  \begin{bmatrix}3 & -2\\[4pt] 1 & 4\end{bmatrix} \;\longrightarrow\;
+  \begin{bmatrix}3 & 2\\[4pt] -1 & 4\end{bmatrix} \] \[ \text{4) Multiplicar
+  pelo inverso do determinante:}\quad A^{-1}=\frac{1}{14} \begin{bmatrix}3 &
+  2\\[4pt] -1 & 4\end{bmatrix} \] \begin{bmatrix} \dfrac{3}{14} &
+  \dfrac{1}{7}\\[8pt] \dfrac{-1}{14} & \dfrac{2}{7} \end{bmatrix}
+
+  <h2 id="Método3x3">Método Prático com Matrizes 3x3</h2>
+  <p>
+    Esse método é um pouco mais complexo que o método com matrizes 2x2, mas
+    segue a uma lógica parecida. Para realizar esse método, deve seguir os
+    seguintes passos:
+  </p>
+  <br />
+  <ol>
+    <li>Calcular o determinante da matriz.</li>
+    <li>
+      Repetir as duas primeiras colunas da direita e repetir as duas primeiras
+      linhas embaixo, dessa forma, ficando uma matriz 5x5.
+    </li>
+    <li>Cancelar a primeira linha e a primeira coluna da matriz 5x5.</li>
+    <li>
+      Realizar várias cálculos de determinante 2x2, para que tenha 3x3 valores
+      de determinante.
+    </li>
+    <li>Montar uma matriz 3x3 através das determinantes.</li>
+    <li>Dividir todos os elementos pelo determinante da matriz inicial.</li>
+  </ol>
+  <br />
+  <p><b>Exemplo 1:</b></p>
+  \[
+  A=\begin{bmatrix}1 & 4 & 3\\[4pt] 2 & 0 & 1\\[4pt] 3 & 0 & 1\end{bmatrix}
+  \qquad\Rightarrow\qquad \det(A)=4
+  \]
+
+  Matriz 5x5 (repete as duas primeiras colunas à direita)
+  \[
+  \begin{bmatrix}
+  1 & 4 & 3 & 1 & 4\\[4pt]
+  2 & 0 & 1 & 2 & 0\\[4pt]
+  3 & 0 & 1 & 3 & 1
+  \end{bmatrix}
+  \;\Longrightarrow\;
+  \operatorname{adj}(A)=
+  \begin{bmatrix}
+  0 & -4 & 4\\[6pt]
+  1 & -8 & 5\\[6pt]
+  0 & 12 & -8
+  \end{bmatrix}
+  \;\Longrightarrow\;
+  A^{-1}=\frac{1}{4}\begin{bmatrix}
+  0 & -4 & 4\\[6pt]
+  1 & -8 & 5\\[6pt]
+  0 & 12 & -8
+  \end{bmatrix}
+  \]
+
+  Resultado final com entradas simplificadas
+  \[
+  A^{-1}=
+  \begin{bmatrix}
+  0 & -1 & 1\\[6pt]
+  \dfrac{1}{4} & -2 & \dfrac{5}{4}\\[6pt]
+  0 & 3 & -2
+  \end{bmatrix}
+  \]
+  <p><b>Exemplo 2:</b></p>
+  \[
+  M=\begin{bmatrix}1 & 0 & 2\\[4pt] 2 & 1 & 3\\[4pt] 3 & 1 & 0\end{bmatrix}
+  \qquad\Rightarrow\qquad \det(M) = -5
+  \]
+  
+  Matriz 5x5 (repete as duas primeiras colunas à direita)
+  \[
+  \begin{bmatrix}
+  1 & 0 & 2 & 1 & 0\\[4pt]
+  2 & 1 & 3 & 2 & 1\\[4pt]
+  3 & 1 & 0 & 3 & 1
+  \end{bmatrix}
+  \;\Longrightarrow\;
+  \operatorname{adj}(M)=
+  \begin{bmatrix}
+  -3 & 2 & -2\\[6pt]
+  9 & -6 & 1\\[6pt]
+  -1 & -1 & 1
+  \end{bmatrix}
+  \;\Longrightarrow\;
+  M^{-1}=\frac{1}{\det(M)}
+  \begin{bmatrix}
+  -3 & 2 & -2\\[6pt]
+  9 & -6 & 1\\[6pt]
+  -1 & -1 & 1
+  \end{bmatrix}
+  \]
+  
+  Resultado final com entradas simplificadas
+  \[
+  M^{-1} = -\tfrac{1}{5}
+  \begin{bmatrix}
+  -3 & 2 & -2\\[6pt]
+  9 & -6 & 1\\[6pt]
+  -1 & -1 & 1
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+  \dfrac{3}{5} & -\dfrac{2}{5} & \dfrac{2}{5}\\[8pt]
+  -\dfrac{9}{5} & \dfrac{6}{5} & -\dfrac{1}{5}\\[8pt]
+  \dfrac{1}{5} & \dfrac{1}{5} & -\dfrac{1}{5}
+  \end{bmatrix}
+  \]
+
+  <h2 id="Criptografia">Criptografia com Matrizes Inversas</h2>
+  <p>As matrizes inversas podem ser utilizadas para o estudo da criptografia. A criptografia é um processo que protege dados transformando em um código secreto, para que somente certas pessoas tenham acesso. Podemos usar as matrizes inversas para criptografar mensagens, através da multiplicação de uma matriz como uma chave codificadora, e o uso da matriz inversa dessa chave pelo destinatário para
+  reverter o processo e obter a mensagem original</p>
+  <p><b>Exemplo:</b></p>
+  \[
+  \qquad\text{Mensagem: }\ \texttt{COMPUTACAO}
+  \]
+  \[
+  \text{Tabela (resumida): } A=1,\; B=2,\; C=3,\; \dots,\; O=15,\; P=16,\; \dots,\; Z=26
+  \]
+
+  1) Converter o texto em números e montar a matriz M (2 x n)
+  \[
+  \text{COMPUTACAO} \;\longrightarrow\;
+  \underbrace{3,\;15,\;13,\;16,\;21,\;20,\;1,\;3,\;1,\;15}_{\text{numeros}}
+  \]
+  Agrupando em pares (colunas) para formar M (2 linhas):
+  \[
+  M=
+  \begin{bmatrix}
+  3 & 13 & 21 & 1 & 1\\[4pt]
+  15 & 16 & 20 & 3 & 15
+  \end{bmatrix}
+  \]
+
+  2) Escolher matriz codificadora A e sua inversa
+  \[
+  A=\begin{bmatrix}2 & 3\\[4pt] 1 & 2\end{bmatrix},
+  \qquad
+  \det(A)= (2)(2)-(3)(1)=1
+  \quad\Rightarrow\quad
+  A^{-1}=\begin{bmatrix}2 & -3\\[4pt] -1 & 2\end{bmatrix}.
+  \]
+
+  3) Codificar: N = A * M
+  \[
+  N = A\cdot M =
+  \begin{bmatrix}
+  51 & 74 & 102 & 11 & 47\\[4pt]
+  33 & 45 & 61 & 7 & 31
+  \end{bmatrix}
+  \]
+
+  \[
+  \text{Mensagem codificada (sequência)}:\quad
+  51,\;33,\;74,\;45,\;102,\;61,\;11,\;7,\;47,\;31
+  \]
+
+  4) Decodificar: aplicar A^{-1} a N para recuperar M
+  \[
+  A^{-1}\cdot N =
+  \begin{bmatrix}2 & -3\\[4pt] -1 & 2\end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+  51 & 74 & 102 & 11 & 47\\[4pt]
+  33 & 45 & 61 & 7 & 31
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+  3 & 13 & 21 & 1 & 1\\[4pt]
+  15 & 16 & 20 & 3 & 15
+  \end{bmatrix}
+  = M
+  \]
+
+  5) Reconverter números em texto
+  \[
+  M \longrightarrow 3,15,\;13,16,\;21,20,\;1,3,\;1,15
+  \quad\Rightarrow\quad \texttt{C O \; M P \; U T \; A C \; A O}
+  \quad\Rightarrow\quad \boxed{\texttt{COMPUTACAO}}
+  \]
+
+
+
+
+  <a class="index" href="tri2.html">Voltar para a Apresentação do Trimestre</a>
+  <footer>
     <br />
-    <div class="summary-2tri">
-      <summary>Sumário - Estatística</summary>
-      <ul>
-        <li id="Definição">Definição de Matriz Inversa</li>
-        <li id="Método2x2">Método Prático com Matrizes 2x2</li>
-        <li id="Método3x3">Método Prático com Matrizes 3x3</li>
-      </ul>
-    </div>
-    <br />
-
-    <h2 id="Definição">Definição de Matriz Inversa</h2>
-    $$A \cdot A^{-1} = A^{-1} \cdot A = I_n$$
-
-    <p>
-      A matriz inversa é uma toda matriz quadrada que, quando multiplicada pela
-      matriz original, resulta na matriz identidade. Para que uma matriz tenha
-      inversa, ela deve ser quadrada (mesmo número de linhas e colunas) e o seu
-      determinante deve ser diferente de zero. Na computação, ela é aplicada na
-      resolução de sistemas lineares e equações diferenciais, em gráficos de
-      computador para transformações (como rotação e escala), em criptografia
-      para decodificar mensagens, na análise de dados.
+    <p align="right" id="Copyright">
+      <b>Feito pelo estudante
+        <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
+      </b>
+      <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
+      do Sul - Campus Erechim
     </p>
+  </footer>
+</body>
 
-    <br />
-    <a class="index" href="index.html"
-      >Voltar para a Apresentação do Trimestre</a
-    >
-    <footer>
-      <br />
-      <p align="right" id="Copyright">
-        <b
-          >Feito pelo estudante
-          <a href="https://www.github.com/NicolasEisfeld/"
-            >Nicolas Eisfeld Ferreira</a
-          ><sup>&copy;</sup>
-        </b>
-        <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
-        do Sul - Campus Erechim
-      </p>
-    </footer>
-  </body>
 </html>
