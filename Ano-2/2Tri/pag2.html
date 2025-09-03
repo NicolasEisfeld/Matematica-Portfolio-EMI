@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>2º Trimestre</title>
-</head>
+  </head>
 
-<body link="#a1aaaa" vlink="#8879ff" class="Trimester">
+  <body link="#a1aaaa" vlink="#8879ff" class="Trimester">
     <header class="menu-header">
-        <section class="nav">
-            <nav class="nav-bar">
-                <a href="index.html" id="1tri-nav">Página Inicial</a>
-                <a href="pag1.html" id="pag1-nav"></a>
-                <a href="pag3.html" id="pag3-nav"></a>
-            </nav>
-        </section>
+      <section class="nav">
+        <nav class="nav-bar">
+          <a href="index.html" id="1tri-nav">Página Inicial</a>
+          <a href="pag1.html" id="pag1-nav">Sistemas Lineares</a>
+          <a href="pag3.html" id="pag3-nav">Trigonometria</a>
+        </nav>
+      </section>
     </header>
 
     <hr />
-    <h1 align="center" class="title-tri2">Estatística Básica</h1>
-    <h2 class="introduction-tri2">Introdução</h2>
-    <p></p>
+    <h1 align="center" class="title-tri2">Matrizes Inversas e Criptografia</h1>
     <br />
     <div class="summary-2tri">
-        <summary>Sumário - Estatística</summary>
+      <summary>Sumário - Estatística</summary>
+      <ul>
+        <li id="Definição">Definição de Matriz Inversa</li>
+        <li id="Método2x2">Método Prático com Matrizes 2x2</li>
+        <li id="Método3x3">Método Prático com Matrizes 3x3</li>
+      </ul>
     </div>
     <br />
 
-    <br />
-    <a class="index" href="index.html">Voltar para a Apresentação do Trimestre</a>
-    <footer>
-        <br />
-        <p align="right" id="Copyright">
-            <b>Feito pelo estudante
-                <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
-            </b>
-            <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
-            do Sul - Campus Erechim
-        </p>
-    </footer>
-</body>
+    <h2 id="Definição">Definição de Matriz Inversa</h2>
+    $$A \cdot A^{-1} = A^{-1} \cdot A = I_n$$
 
+    <p>
+      A matriz inversa é uma toda matriz quadrada que, quando multiplicada pela
+      matriz original, resulta na matriz identidade. Para que uma matriz tenha
+      inversa, ela deve ser quadrada (mesmo número de linhas e colunas) e o seu
+      determinante deve ser diferente de zero. Na computação, ela é aplicada na
+      resolução de sistemas lineares e equações diferenciais, em gráficos de
+      computador para transformações (como rotação e escala), em criptografia
+      para decodificar mensagens, na análise de dados.
+    </p>
+
+    <br />
+    <a class="index" href="index.html"
+      >Voltar para a Apresentação do Trimestre</a
+    >
+    <footer>
+      <br />
+      <p align="right" id="Copyright">
+        <b
+          >Feito pelo estudante
+          <a href="https://www.github.com/NicolasEisfeld/"
+            >Nicolas Eisfeld Ferreira</a
+          ><sup>&copy;</sup>
+        </b>
+        <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
+        do Sul - Campus Erechim
+      </p>
+    </footer>
+  </body>
 </html>
