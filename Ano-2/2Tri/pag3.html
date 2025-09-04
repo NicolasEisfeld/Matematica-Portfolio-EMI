@@ -14,21 +14,120 @@
         <section class="nav">
             <nav class="nav-bar">
                 <a href="tri2.html" id="1tri-nav">Página Inicial</a>
-                <a href="pag1.html" id="pag1-nav"></a>
-                <a href="pag2.html" id="pag2-nav"></a>
+                <a href="pag1.html" id="pag1-nav">Sistemas Lineares</a>
+                <a href="pag2.html" id="pag2-nav">Matrizes Inversas</a>
             </nav>
         </section>
     </header>
 
     <hr />
-    <h1 align="center" class="title-tri2">Estatística Básica</h1>
-    <h2 class="introduction-tri2">Introdução</h2>
-    <p></p>
+    <h1 align="center" class="title-tri2">Trigonometria</h1>
+
     <br />
     <div class="summary-2tri">
-        <summary>Sumário - Estatística</summary>
+        <summary>Sumário - Trigonometria</summary>
+        <ul>
+            <li><a href="#Definição">Definição de um Triângulo Retangulo</a></li>
+            <li><a href="#Propriedades">Propriedades dos Triângulos Retângulos</a></li>
+        </ul>
     </div>
     <br />
+    <h2 id="Definição">Definição de um Triângulo Retangulo</h2>
+    <p>
+        Um triângulo retângulo é um tipo triângulo que possui um ângulo reto (90 graus), e assim, os outros dois ângulos
+        são agudos (menores que 90 graus). Os lados do triângulo retângulo têm nomes específicos:
+    </p>
+    <ul>
+        <li><b>Hipotenusa:</b> é o lado maior do triângulo, em que sempre será oposto ao ângulo reto.</li>
+        <li><b>Catetos:</b> são os dois lados menores do triângulo, que formam o ângulo reto. Eles podem ser
+            classficados de duas formas distintas, dependendo do referencial que estamos nos referindo.</li>
+        <ul>
+            <li><b>Cateto Oposto:</b> é o cateto que está oposto ao ângulo de referência.</li>
+            <li><b>Cateto Adjacente:</b> é o cateto que está ao lado do ângulo de referência.</li>
+        </ul>
+    </ul>
+
+    iframe src="https://www.geogebra.org/classic/ffnfcq8w?embed" width="800" height="600" allowfullscreen
+        style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+    <h2 id="Propriedades">Propriedades dos Triângulos Retângulos</h2>
+    <p><b>Teorema de Pitágoras:</b> É o teorema utilizado na área de trigonometria, que faz uma importante relação entre os lados de um triângulo retângulo. Na computação é aplicado para calcular distâncias (distância euclidiana), vital para a navegação e a ciência de dados, e no desenvolvimento de algoritmos, permitindo
+    otimizar rotas e determinar a localização de objetos.
+</p>
+    $$a^2 + b^2 = c^2$$
+
+    <b>Fórmulas das razões trigonométricas</b>
+    \[
+    \sin(\theta) = \frac{\text{cateto oposto}}{\text{hipotenusa}}
+    \]
+    
+    \[
+    \cos(\theta) = \frac{\text{cateto adjacente}}{\text{hipotenusa}}
+    \]
+    
+    \[
+    \tan(\theta) = \frac{\text{cateto oposto}}{\text{cateto adjacente}}
+    \]
+    
+    <b>Tabela de ângulos notáveis</b>
+    \[
+    \begin{array}{|c|c|c|c|}
+    \hline
+    \theta & 30^\circ & 45^\circ & 60^\circ \\
+    \hline
+    \sin(\theta) & \tfrac{1}{2} & \tfrac{\sqrt{2}}{2} & \tfrac{\sqrt{3}}{2} \\
+    \hline
+    \cos(\theta) & \tfrac{\sqrt{3}}{2} & \tfrac{\sqrt{2}}{2} & \tfrac{1}{2} \\
+    \hline
+    \tan(\theta) & \tfrac{\sqrt{3}}{3} & 1 & \sqrt{3} \\
+    \hline
+    \end{array}
+    \]
+
+    <b>Fórmulas das funções trigonométricas inversas</b>
+    
+    \[
+    y = \arcsin(x) \quad \Longleftrightarrow \quad \sin(y) = x, \; y \in \left[-\tfrac{\pi}{2}, \tfrac{\pi}{2}\right]
+    \]
+    
+    \[
+    y = \arccos(x) \quad \Longleftrightarrow \quad \cos(y) = x, \; y \in [0, \pi]
+    \]
+    
+    \[
+    y = \arctan(x) \quad \Longleftrightarrow \quad \tan(y) = x, \; y \in \left(-\tfrac{\pi}{2}, \tfrac{\pi}{2}\right)
+    \]
+
+    <p><b>Exemplo:</b> Um triângulo retângulo tem dimensões de 3, 4 e 5 cm. Encontre
+    medidas dos dois ângulos agudos internos. Faça um desenho.</p>
+
+    \[
+    \text{Hipotenusa} = 5, \quad \text{Catetos} = 3 \;\; \text{e} \;\; 4
+    \]
+    
+    Ângulo A oposto ao cateto de 3 cm
+    \[
+    \sin(A) = \frac{3}{5} \quad \Rightarrow \quad A = \arcsin\!\left(\tfrac{3}{5}\right)
+    \]
+    
+    \[
+    A \approx 36,87^\circ
+    \]
+    
+    Ângulo B oposto ao cateto de 4 cm
+    \[
+    \sin(B) = \frac{4}{5} \quad \Rightarrow \quad B = \arcsin\!\left(\tfrac{4}{5}\right)
+    \]
+    
+    \[
+    B \approx 53,13^\circ
+    \]
+    
+    Verificação
+    \[
+    A + B = 36,87^\circ + 53,13^\circ = 90^\circ
+    \]
+
 
     <br />
     <a class="index" href="tri2.html">Voltar para a Apresentação do Trimestre</a>
