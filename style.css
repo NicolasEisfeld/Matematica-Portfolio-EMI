@@ -162,7 +162,6 @@ h2::after {
 
 .card summary {
     list-style: none;
-    /* remove o marcador padrão */
     padding: 1rem 1rem;
     color: #f1faff;
     background-color: transparent;
@@ -170,10 +169,10 @@ h2::after {
     cursor: pointer;
     font-weight: bold;
     user-select: none;
-    /* evita selecionar o texto sem querer */
+
 }
 
-/* remove a setinha padrão do summary */
+
 .card summary::-webkit-details-marker {
     display: none;
 }
@@ -204,6 +203,14 @@ h2::after {
     background-color: var(--menu);
     color: #fff;
     transform: scale(1.05);
+}
+
+details[open] summary+* {
+    display: block;
+}
+
+details:not([open]) summary+* {
+    display: none;
 }
 
 @media(max-width: 1300px) {
