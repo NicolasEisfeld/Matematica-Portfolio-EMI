@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>3º Trimestre</title>
 </head>
 
 <body link="#a1aaaa" vlink="#8879ff" class="Trimester">
+    <!-- Barra de navegação horizontal -->
     <header class="menu-header">
         <section class="nav">
             <nav class="nav-bar">
@@ -20,34 +22,76 @@
         </section>
     </header>
 
-    <hr />
+    <!-- Barra lateral para links internos -->
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="#Introducao" class="sidebar-link">Introdução</a>
+            <a href="#" class="sidebar-link"></a>
+            <a href="#" class="sidebar-link"></a>
+        </nav>
+    </aside>
 
-    <h1 align="center" class="title-tri3">Terceiro Trimestre</h1>
-    <h3 align="center" class="subtitle-tri3">
-        2º Ano / EMI - Informática / Nicolas Eisfeld Ferreira
-    </h3>
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+
+        <h1 align="center" class="title-tri3">Terceiro Trimestre</h1>
+        <h3 align="center" class="subtitle-tri3">
+            2º Ano / EMI - Informática / Nicolas Eisfeld Ferreira
+        </h3>
 
 
-    <h2 class="introduction-tri3">Introdução</h2>
-    <div class="summary-3tri">
-        <summary>Sumário</summary>
-        <ul>
+        <div id="Introducao">
+            <h2 class="introduction-tri3">Introdução</h2>
 
-        </ul>
-    </div>
-    <br />
+        </div>
+        <div id="">
 
-    <a class="index" href="/Matematica-Portfolio-EMI/index.html">Voltar para a Apresentação do Portfólio</a>
-    <footer>
+        </div>
+        <div id="">
+
+        </div>
         <br />
-        <p align="right" id="Copyright">
-            <b>Feito pelo estudante
-                <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
-            </b>
-            <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
-            do Sul - Campus Erechim
-        </p>
-    </footer>
+        <a class="index" href="/Matematica-Portfolio-EMI/index.html">Voltar para a Apresentação do Portfólio</a>
+        <footer>
+            <br />
+            <p align="right" id="Copyright">
+                <b>Feito pelo estudante
+                    <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
+                </b>
+                <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
+                do Sul - Campus Erechim
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        // Destacar link ativo na barra lateral ao rolar a página
+        const sections = document.querySelectorAll('div[id]');
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+        function updateActiveLink() {
+            let current = '';
+            const scrollPosition = window.pageYOffset + 200;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        window.addEventListener('load', updateActiveLink);
+    </script>
 </body>
 
 </html>

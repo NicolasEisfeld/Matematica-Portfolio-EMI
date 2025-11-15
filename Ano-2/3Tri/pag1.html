@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-    <title>1º Trimestre</title>
+    <title>3º Trimestre</title>
 </head>
 
 <body link="#a1aaaa" vlink="#8879ff" class="Trimester">
+    <!-- Barra de navegação horizontal -->
     <header class="menu-header">
         <section class="nav">
             <nav class="nav-bar">
@@ -20,7 +22,17 @@
         </section>
     </header>
 
-    <hr />
+    <!-- Barra lateral para links internos -->
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="#Introducao" class="sidebar-link">Introdução</a>
+            <a href="#Senos" class="sidebar-link">Lei dos Senos</a>
+            <a href="#Cossenos" class="sidebar-link">Lei dos Cossenos</a>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
 
     <h1 align="center" class="title-tri3">Terceiro Trimestre</h1>
     <h3 align="center" class="subtitle-tri3">
@@ -28,27 +40,77 @@
     </h3>
 
 
-    <h2 class="introduction-tri3">Introdução</h2>
-    <div class="summary-3tri">
-        <summary>Sumário</summary>
-        <ul>
-            <li><a href="#Senos">Lei dos Senos</a></li>
-            <li><a href="#Cossenos">Lei dos Cossenos</a></li>
-        </ul>
+    <div id="Introducao">
+        <h2 class="introduction-tri3">Introdução</h2>
+        <p>Dando seguimento ao estudo da Geometria Plana, em especial a Trigonometria, foi visto o conteúdo da Lei dos Senos e dos Cossenos.
+             Para esse tópico, é necessário compreender o que foi estudado anteriormente no segundo trimestre</p>
     </div>
-    <br />
+    <div id="Senos">
+        <h2 >Lei dos Senos</h2>
+        <p>É uma expressão matemática que relaciona os lados de um triângulo qualquer com seus ângulos. De acordo com a Lei, a razão entre cada lado e o seno do seu oposto é constante dado qualquer triângulo.</p>
+        
+        \[
+        \frac{a}{\operatorname{sen}(\alpha)} = \frac{b}{\operatorname{sen}(\beta)} = \frac{c}{\operatorname{sen}(\gamma)} = 2R
+        \]
 
-    <a class="index" href="/Matematica-Portfolio-EMI/index.html">Voltar para a Apresentação do Portfólio</a>
-    <footer>
+    </div>
+    <div id="Cossenos">
+        <h2 >Lei dos Cossenos</h2>
+        <p>Outro teorema importante para a resolução de triângulos é a lei dos Cossenos, 
+            especialmente especialmente quando se conhece três lados ou dois lados e o ângulo incluso. A fórmula estabelecida pela lei é: </p>
+        
+        \[
+        a^2 = b^2 + c^2 - 2bc \cdot \cos(A)
+        \]
+
+        <p>Para a computação, a aplicação desssas leis é importante, principalmente em áreas que lidam com geometria, gráficos e
+            localização espacial. Ela permite resolver triângulos não retângulos, o que é crucial em muitas aplicações práticas.
+            Ela é uma ferramenta matemática essencial que, quando implementada em algoritmos, permite que os computadores
+            simulem, analisem e interajam com o mundo físico e virtual de maneira precisa e eficiente.</p>
+        
+    </div>
         <br />
-        <p align="right" id="Copyright">
-            <b>Feito pelo estudante
-                <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
-            </b>
-            <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
-            do Sul - Campus Erechim
-        </p>
-    </footer>
+        <a class="index" href="/Matematica-Portfolio-EMI/index.html">Voltar para a Apresentação do Portfólio</a>
+        <footer>
+            <br />
+            <p align="right" id="Copyright">
+                <b>Feito pelo estudante
+                    <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
+                </b>
+                <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
+                do Sul - Campus Erechim
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        // Destacar link ativo na barra lateral ao rolar a página
+        const sections = document.querySelectorAll('div[id]');
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+        function updateActiveLink() {
+            let current = '';
+            const scrollPosition = window.pageYOffset + 200;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        window.addEventListener('load', updateActiveLink);
+    </script>
 </body>
 
 </html>
