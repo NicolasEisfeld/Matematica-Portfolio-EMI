@@ -1,119 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>3º Trimestre</title>
-</head>
+  </head>
 
-<body link="#a1aaaa" vlink="#8879ff" class="Trimester">
+  <body link="#a1aaaa" vlink="#8879ff" class="Trimester">
     <!-- Barra de navegação horizontal -->
     <header class="menu-header">
-        <section class="nav">
-            <nav class="nav-bar">
-                <a href="tri3.html" id="index">Página Inicial</a>
-                <a href="pag1.html" id="pag1-nav">Trigonometria</a>
-                <a href="pag2.html" id="pag2-nav">Ciclo trigonométrico</a>
-                <a href="pag3.html" id="pag3-nav">Funções trigonométricas</a>
-            </nav>
-        </section>
+      <section class="nav">
+        <nav class="nav-bar">
+          <a href="tri3.html" id="index">Página Inicial</a>
+          <a href="pag1.html" id="pag1-nav">Trigonometria</a>
+          <a href="pag2.html" id="pag2-nav">Ciclo trigonométrico</a>
+          <a href="pag3.html" id="pag3-nav">Funções trigonométricas</a>
+        </nav>
+      </section>
     </header>
 
     <!-- Barra lateral para links internos -->
     <aside class="sidebar">
-        <nav class="sidebar-nav">
-            <a href="#Introducao" class="sidebar-link">Introdução</a>
-            <a href="#GrausRadianos" class="sidebar-link">Graus e Radianos</a>
-            <a href="#CicloTrig" class="sidebar-link">Trigonometria no Ciclo</a>
-        </nav>
+      <nav class="sidebar-nav">
+        <a href="#GrausRadianos" class="sidebar-link">Graus e Radianos</a>
+        <a href="#CicloTrig" class="sidebar-link">Trigonometria no Ciclo</a>
+      </nav>
     </aside>
 
     <!-- Conteúdo principal -->
     <main class="main-content">
+      <h1 align="center" class="title-tri3">Terceiro Trimestre</h1>
+      <h3 align="center" class="subtitle-tri3">
+        2º Ano / EMI - Informática / Nicolas Eisfeld Ferreira
+      </h3>
 
-        <h1 align="center" class="title-tri3">Terceiro Trimestre</h1>
-        <h3 align="center" class="subtitle-tri3">
-            2º Ano / EMI - Informática / Nicolas Eisfeld Ferreira
-        </h3>
-
-
-        <div id="Introducao">
-            <h2 class="introduction-tri3">Introdução</h2>
-
-        </div>
-        <div id="">
-
-        </div>
-        <div id="CicloTrig">
-            <h2>Ciclo trigonométrico</h2>
-            <p>É um Círculo Unitário (ou seja, com o valor de raio sendo 1) que demonstra de forma gráfica as razões trigonométricas.  
-                Dessa forma, é possível entender o comportamento dessas razões de forma mais simples através desse ciclo.</p>
-                
-            <p><b>Ciclo Trigonométrico Interativo</b></p>    
-            <iframe src="https://www.geogebra.org/classic/qfud7mvv?embed" width="1000" height="600" allowfullscreen
-                style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-
-            <p><b>Arcos Congruentes:</b> São arcos que possuem valores diferentes, porém estão no mesma posição no ciclo trigonométrico.</p>
-            <p><b>Expressão Geral:</b></p>
-
-            \[
-            \alpha + k\cdot 2\pi \qquad \text{ou} \qquad \alpha + k\cdot 360^\circ \qquad \text{com } k\in\mathbb{Z}
-            \]
-
-
-            <br />
-            <p><b>Primeira Determinação:</b> É o menor ângulo possível que é côngruo a um determinado arco. 
-                Em outras palavras, é um valor que está entre 0 e 360 graus, pois é os valores possíveis em uma volta somente. 
-                Para obter a primeira determinação positiva, é necessário dividir o arco por 360° em uma divisão inteira. 
-                Para ângulos que são negativos, é preciso dividir o valor absoluto do arco por 360°, o resto é a primeira determinação negativa. 
-                Para encontrar a positiva, se subtrai o valor absoluto do resto de 360°.</p>
-
-        </div>
+      <div id="GrausRadianos">
+        <h2>Graus e Radianos</h2>
+        <p>
+          O grau é uma unidade de medida de ângulo que é igual a 1/360 de uma
+          volta completa. O radiano é uma unidade de medida de ângulo que é
+          igual a 1/2π de uma volta completa. 
+        </p>
         <br />
-        <a class="index" href="tri3.html">Voltar para a Apresentação do Trimestre</a>
-        <footer>
-            <br />
-            <p align="right" id="Copyright">
-                <b>Feito pelo estudante
-                    <a href="https://www.github.com/NicolasEisfeld/">Nicolas Eisfeld Ferreira</a><sup>&copy;</sup>
-                </b>
-                <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
-                do Sul - Campus Erechim
-            </p>
-        </footer>
+        <p>
+          Para converter graus para radianos, é necessário multiplicar o valor em graus por π/180. Para
+          converter radianos para graus, é necessário multiplicar o valor em
+          radianos por 180/π. Exemplo: 45° = π/4 radianos e 3π/4 radianos =
+          135°.
+        </p>
+        
+        <br />
+        <p>
+          Para a computação, a conversão de graus para radianos é importante
+          para a realização de cálculos envolvendo ângulos em funções
+          trigonométricas, como seno, cosseno e tangente. Essas funções são
+          essenciais em algoritmos de processamento de imagens, simulação de
+          movimentos, análise de sinais e em diversas aplicações científicas e
+          de engenharia.
+        </p>
+      </div>
+
+      <div id="CicloTrig">
+        <h2>Ciclo trigonométrico</h2>
+        <p>
+          É um Círculo Unitário (ou seja, com o valor de raio sendo 1) que
+          demonstra de forma gráfica as razões trigonométricas. Dessa forma, é
+          possível entender o comportamento dessas razões de forma mais simples
+          através desse ciclo.
+        </p>
+        <br />
+        <p><b>Ciclo Trigonométrico Interativo</b></p>
+        <iframe
+          src="https://www.geogebra.org/classic/qfud7mvv?embed"
+          width="1000"
+          height="600"
+          allowfullscreen
+          style="border: 1px solid #e4e4e4; border-radius: 4px"
+          frameborder="0"
+        ></iframe>
+
+        <p>
+          <b>Arcos Congruentes:</b> São arcos que possuem valores diferentes,
+          porém estão no mesma posição no ciclo trigonométrico.
+        </p>
+        <p><b>Expressão Geral:</b></p>
+
+        \[ \alpha + k\cdot 2\pi \qquad \text{ou} \qquad \alpha + k\cdot
+        360^\circ \qquad \text{com } k\in\mathbb{Z} \]
+
+        <br />
+        <p>
+          <b>Primeira Determinação:</b> É o menor ângulo possível que é côngruo
+          a um determinado arco. Em outras palavras, é um valor que está entre 0
+          e 360 graus, pois é os valores possíveis em uma volta somente. Para
+          obter a primeira determinação positiva, é necessário dividir o arco
+          por 360° em uma divisão inteira. 
+        </p>
+        <br />
+        <p>
+          Para ângulos que são negativos, é
+          preciso dividir o valor absoluto do arco por 360°, o resto é a
+          primeira determinação negativa. Para encontrar a positiva, se subtrai
+          o valor absoluto do resto de 360°.
+        </p>
+      </div>
+      <br />
+      <a class="index" href="tri3.html"
+        >Voltar para a Apresentação do Trimestre</a
+      >
+      <footer>
+        <br />
+        <p align="right" id="Copyright">
+          <b
+            >Feito pelo estudante
+            <a href="https://www.github.com/NicolasEisfeld/"
+              >Nicolas Eisfeld Ferreira</a
+            ><sup>&copy;</sup>
+          </b>
+          <br />Instituto Federal de Educação, Ciência e Tecnologia do Rio
+          Grande do Sul - Campus Erechim
+        </p>
+      </footer>
     </main>
 
     <script>
-        // Destacar link ativo na barra lateral ao rolar a página
-        const sections = document.querySelectorAll('div[id]');
-        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+      // Destacar link ativo na barra lateral ao rolar a página
+      const sections = document.querySelectorAll("div[id]");
+      const sidebarLinks = document.querySelectorAll(".sidebar-link");
 
-        function updateActiveLink() {
-            let current = '';
-            const scrollPosition = window.pageYOffset + 200;
+      function updateActiveLink() {
+        let current = "";
+        const scrollPosition = window.pageYOffset + 200;
 
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            current = section.getAttribute("id");
+          }
+        });
 
-            sidebarLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
-        }
+        sidebarLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      }
 
-        window.addEventListener('scroll', updateActiveLink);
-        window.addEventListener('load', updateActiveLink);
+      window.addEventListener("scroll", updateActiveLink);
+      window.addEventListener("load", updateActiveLink);
     </script>
-</body>
-
+  </body>
 </html>
