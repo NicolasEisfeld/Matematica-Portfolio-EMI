@@ -43,39 +43,325 @@
 
 
         <div id="Introducao">
-            <h2 class="introduction-tri3">Introdução</h2>
-
+            <h2 class="introduction-tri3">Introdução às Funções Periódicas</h2>
+            <p>
+                Muitos fenômenos naturais, físicos e sociais têm comportamento cíclico ou periódico (que se repetem a cada determinado período), 
+                podendo ser modelados por funções trigonométricas. Nesse sentido, essas funções são capazes de representar as oscilações desses 
+                fenômenos ao decorrer de um intervalo de tempo.
+            </p>
+            <p>
+                A maré (movimento de descida e subida do nível das águas) é um exemplo de fenômeno periódico devido à força gravitacional exercida 
+                pela lua e pelo sol na terra.
+            </p>
+            <p>
+                <b>Exemplo:</b> Em uma cidade litorânea do nordeste brasileiro, em determinada época do ano, a maré baixa acontece por volta das 12 h 
+                e das 24 h, e a maré alta ocorre por volta das 6 h e das 18 h. A função trigonométrica a seguir modela, de modo aproximado, a altura 
+                \(h\) da maré (em metro) nessa época:
+            </p>
+            <p style="text-align: center; font-size: 1.3rem; margin: 1.5rem 0;">
+                $$h(t)=1,15-1,05 \cdot \cos \left(t \cdot \frac{\pi}{6}\right)$$
+            </p>
+            <p>
+                em que o tempo (\(t\)) é medido em hora a partir da meia-noite.
+            </p>
+            <p>
+                A maré alta atinge 2,2 metros a cada 12 h e ocorre às 6 h e às 18 h.<br>
+                A maré baixa atinge 0,1 metro a cada 12 h e ocorre às 0 h e às 12 h.
+            </p>
+            <p>
+                Outros fenômenos apresentam comportamento periódico semelhante, como as variações de temperatura terrestre e da pressão sanguínea, 
+                a propagação do som, entre outros.
+            </p>
         </div>
         <br />
         <div id="FuncSeno">
             <h2>Função Seno</h2>
+            <h3>Definição</h3>
             <p>
-                A Função Seno é uma função periódica em que relaciona um ângulo com a razão entre o cateto oposto e a hipotenusa em um triângulo retângulo. 
-                Ela é muito utilizada na descrição de fenomenos de oscilação ou ondulação. <br />
-                <b>Domínio</b>: Todos os números reais ( \(R\) ). <br />
-                <b>Imagem</b>: O intervalo de \(-1\) a \(1\), pois o valor máximo do seno é \(1\) e o mínimo é \(-1\). <br />
-                <b>Período</b>: A função se repete a cada \(2\pi \) radianos. Isso significa que \(\sin (x)=\sin (x+2k\pi )\) para qualquer número inteiro \(k\).
+                É a função de \(\mathbb{R}\) em \(\mathbb{R}\) que a cada \(x \in \mathbb{R}\) faz corresponder o número real \(\operatorname{sen}(x)\), ou seja,
             </p>
+            <p style="text-align: center; font-size: 1.2rem; margin: 1rem 0;">
+                $$f: \mathbb{R} \rightarrow \mathbb{R} \quad x \rightarrow f(x)=\operatorname{sen}(x)$$
+            </p>
+            
+            <h3>Gráfico</h3>
+            <p>
+                Podemos atribuir valores para \(x\) e calcular os valores de \(\operatorname{sen}(x)\), construindo uma tabela. Fazendo um diagrama com \(x\) 
+                em abscissas e \(\operatorname{sen}(x)\) em ordenadas, podemos construir o seguinte gráfico, denominado <b>senoide</b>, que nos indica como varia 
+                a função \(f(x)=\operatorname{sen}(x)\).
+            </p>
+            
+            <table style="margin: 1.5rem auto; border-collapse: collapse; width: 50%; min-width: 300px;">
+                <thead>
+                    <tr style="background-color: #222222;">
+                        <th style="padding: 0.75rem; border: 1px solid #444;">\(x\)</th>
+                        <th style="padding: 0.75rem; border: 1px solid #444;">\(y=\operatorname{sen}(x)\)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{6}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{1}{2}\)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{4}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\sqrt{2}}{2}\)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{3}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\sqrt{3}}{2}\)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{2}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">1</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\pi\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{3\pi}{2}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">-1</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(2\pi\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Características</h3>
+            <p>
+                <b>Domínio</b>: \(D=\mathbb{R}\) (todos os números reais)<br>
+                <b>Imagem</b>: \(\operatorname{Im}(f)=[-1,1]\) (todos os valores de \(y\) estão no intervalo de \(-1\) a \(1\))<br>
+                <b>Amplitude</b>: A amplitude é 2 (diferença entre o valor máximo 1 e o mínimo -1)<br>
+                <b>Período</b>: \(P=2\pi\) (a função se repete a cada \(2\pi\) radianos)<br>
+                <b>Sinal</b>: A função seno é positiva no 1º e 2º quadrantes e negativa no 3º e 4º quadrantes
+            </p>
+            
+            <h3>Periodicidade</h3>
+            <p>
+                A função repete periodicamente seus valores nos intervalos \([0,2\pi],[2\pi,4\pi],\ldots\) Daí dizemos que a função seno é periódica. 
+                Para \(f(x)=\operatorname{sen}(x)\) dizemos que o período é \(2\pi\) e indicamos por: \(P=2\pi\).
+            </p>
+            
+            <h3>Relação do Gráfico com o Ciclo Trigonométrico</h3>
+            <p>
+                O gráfico da função seno está diretamente relacionado ao ciclo trigonométrico. Quando um ponto percorre o ciclo trigonométrico no sentido 
+                anti-horário, a projeção desse ponto no eixo vertical (eixo dos senos) gera os valores da função seno. À medida que o ângulo aumenta, 
+                o valor do seno oscila entre \(-1\) e \(1\), criando a forma de onda característica da senoide.
+            </p>
+            
+            <br />
             <iframe src="https://www.geogebra.org/calculator/yvje5pqy?embed" width="1200" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
         </div>
         <br />
         <div id="FuncCosseno">
             <h2>Função Cosseno</h2>
+            <h3>Definição</h3>
             <p>
-                A Função Cosseno é outra função periódica 
+                É a função de \(\mathbb{R}\) em \(\mathbb{R}\) que a cada \(x \in \mathbb{R}\) faz corresponder o número real \(\cos(x)\), ou seja,
             </p>
+            <p style="text-align: center; font-size: 1.2rem; margin: 1rem 0;">
+                $$f: \mathbb{R} \rightarrow \mathbb{R} \quad x \rightarrow f(x)=\cos(x)$$
+            </p>
+            
+            <h3>Gráfico</h3>
+            <p>
+                Para construir o gráfico, podemos atribuir valores para \(x\) e calcular os valores de \(\cos(x)\), construindo uma tabela. Fazendo um diagrama 
+                com \(x\) em abscissas e \(\cos(x)\) em ordenadas, podemos construir o seguinte gráfico, denominado <b>cossenoide</b>, que nos indica como varia 
+                a função \(f(x)=\cos(x)\).
+            </p>
+            
+            <table style="margin: 1.5rem auto; border-collapse: collapse; width: 50%; min-width: 300px;">
+                <thead>
+                    <tr style="background-color: #222222;">
+                        <th style="padding: 0.75rem; border: 1px solid #444;">\(x\)</th>
+                        <th style="padding: 0.75rem; border: 1px solid #444;">\(y=\cos(x)\)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">1</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{6}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\sqrt{3}}{2}\)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{4}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\sqrt{2}}{2}\)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{3}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{1}{2}\)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{2}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\pi\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">-1</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{3\pi}{2}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(2\pi\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">1</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Características</h3>
+            <p>
+                <b>Domínio</b>: \(D=\mathbb{R}\) (todos os números reais)<br>
+                <b>Imagem</b>: \(\operatorname{Im}(f)=[-1,1]\) (todos os valores de \(y\) estão no intervalo de \(-1\) a \(1\))<br>
+                <b>Amplitude</b>: A amplitude é 2 (diferença entre o valor máximo 1 e o mínimo -1)<br>
+                <b>Período</b>: \(P=2\pi\) (a função se repete a cada \(2\pi\) radianos)<br>
+                <b>Sinal</b>: A função cosseno é positiva no 1º e 4º quadrantes e negativa no 2º e 3º quadrantes
+            </p>
+            
+            <h3>Periodicidade</h3>
+            <p>
+                A função repete periodicamente seus valores nos intervalos \([0,2\pi],[2\pi,4\pi],\ldots\) Daí dizemos que a função cosseno é periódica. 
+                Para \(f(x)=\cos(x)\) dizemos que o período é \(2\pi\) e indicamos por: \(P=2\pi\).
+            </p>
+            
+            <h3>Relação do Gráfico com o Ciclo Trigonométrico</h3>
+            <p>
+                O gráfico da função cosseno está diretamente relacionado ao ciclo trigonométrico. Quando um ponto percorre o ciclo trigonométrico no sentido 
+                anti-horário, a projeção desse ponto no eixo horizontal (eixo dos cossenos) gera os valores da função cosseno. À medida que o ângulo aumenta, 
+                o valor do cosseno oscila entre \(-1\) e \(1\), criando a forma de onda característica da cossenoide.
+            </p>
+            
+            <br />
             <iframe src="https://www.geogebra.org/calculator/dcv5bktu?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
         </div>
         <br />
         <div id="FuncTangente">
             <h2>Função Tangente</h2>
+            <h3>Definição</h3>
             <p>
-
+                É a função que a cada \(x \in \mathbb{R}\), com \(x \neq \frac{\pi}{2} + k\pi\) (\(k \in \mathbb{Z}\)), faz corresponder o número real \(\tan(x)\), ou seja,
             </p>
+            <p style="text-align: center; font-size: 1.2rem; margin: 1rem 0;">
+                $$f: \{x \in \mathbb{R} \mid x \neq \frac{\pi}{2} + k\pi, k \in \mathbb{Z}\} \rightarrow \mathbb{R} \quad x \rightarrow f(x)=\tan(x)$$
+            </p>
+            
+            <h3>Gráfico</h3>
+            <p>
+                O gráfico da função tangente é denominado <b>tangentoide</b>. Ele apresenta assíntotas verticais nos pontos onde a função não está definida 
+                (múltiplos ímpares de \(\frac{\pi}{2}\)).
+            </p>
+            
+            <table style="margin: 1.5rem auto; border-collapse: collapse; width: 50%; min-width: 300px;">
+                <thead>
+                    <tr style="background-color: #222222;">
+                        <th style="padding: 0.75rem; border: 1px solid #444;">\(x\)</th>
+                        <th style="padding: 0.75rem; border: 1px solid #444;">\(y=\tan(x)\)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{6}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\sqrt{3}}{3}\)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{4}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">1</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{3}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\sqrt{3}\)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{\pi}{2}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\not\exists\)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\pi\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\frac{3\pi}{2}\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(\not\exists\)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">\(2\pi\)</td>
+                        <td style="padding: 0.75rem; border: 1px solid #444; text-align: center;">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Características</h3>
+            <p>
+                <b>Domínio</b>: \(D=\{x \in \mathbb{R} \mid x \neq \frac{\pi}{2} + k\pi, k \in \mathbb{Z}\}\) (todos os números reais, exceto os múltiplos ímpares de \(\frac{\pi}{2}\))<br>
+                <b>Imagem</b>: \(\operatorname{Im}(f)=\mathbb{R}\) (todos os números reais)<br>
+                <b>Período</b>: \(P=\pi\) (a função se repete a cada \(\pi\) radianos)<br>
+                <b>Sinal</b>: A função tangente é positiva no 1º e 3º quadrantes e negativa no 2º e 4º quadrantes<br>
+                <b>Assíntotas</b>: Retas verticais nos pontos \(x=\frac{\pi}{2} + k\pi\), onde \(k \in \mathbb{Z}\)
+            </p>
+            
+            <h3>Periodicidade</h3>
+            <p>
+                A função repete periodicamente seus valores a cada \(\pi\) radianos. Para \(f(x)=\tan(x)\) dizemos que o período é \(\pi\) e indicamos por: \(P=\pi\).
+            </p>
+            
+            <br />
             <iframe src="https://www.geogebra.org/calculator/dcv5bktu?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
         </div>
         <br />
         <div id="Metodos">
+            <h2>Métodos de Resolução</h2>
+            <p>Foi aprendido dois métodos para descobrir a fórmula de uma função trigonométrica:</p>
+            <ol>
+                <li><b>Método da Tabela</b>: Consiste em construir uma tabela com valores de \(x\) e seus respectivos valores de \(f(x)\), 
+                    identificando padrões e características como amplitude, período, deslocamentos vertical e horizontal.</li>
+                <li><b>Método Gráfico</b>: Consiste em analisar o gráfico da função para identificar visualmente suas características, 
+                    como amplitude (diferença entre máximo e mínimo), período (distância entre dois pontos equivalentes), 
+                    deslocamento vertical (valor médio entre máximo e mínimo) e deslocamento horizontal (fase inicial).</li>
+            </ol>
+            
+            <h3>Transformações nas Funções Trigonométricas</h3>
+            <p>
+                As funções trigonométricas podem sofrer transformações que alteram suas características:
+            </p>
+            <ul>
+                <li><b>Amplitude</b>: Alterada pelo coeficiente \(a\) na função \(f(x)=a \cdot \operatorname{sen}(bx+c)+d\) ou \(f(x)=a \cdot \cos(bx+c)+d\). 
+                    A amplitude é \(|a|\).</li>
+                <li><b>Período</b>: Alterado pelo coeficiente \(b\) na função. O período é dado por \(P=\frac{2\pi}{|b|}\) para seno e cosseno, 
+                    e \(P=\frac{\pi}{|b|}\) para tangente.</li>
+                <li><b>Deslocamento Horizontal</b>: Alterado pelo coeficiente \(c\) na função. O gráfico é deslocado horizontalmente.</li>
+                <li><b>Deslocamento Vertical</b>: Alterado pelo coeficiente \(d\) na função. O gráfico é deslocado verticalmente.</li>
+            </ul>
+            
+            <h3>Forma Geral das Funções Trigonométricas</h3>
+            <p style="text-align: center; font-size: 1.1rem; margin: 1rem 0;">
+                $$f(x)=a+b \cdot \operatorname{sen}(cx+d) \quad \text{ou} \quad f(x)=a+b \cdot \cos(cx+d)$$
+            </p>
+            <p>
+                Onde:
+            </p>
+            <ul>
+                <li>\(a\): deslocamento vertical (valor médio)</li>
+                <li>\(b\): amplitude (quando positivo, amplitude normal; quando negativo, reflexão vertical)</li>
+                <li>\(c\): altera o período (\(P=\frac{2\pi}{|c|}\))</li>
+                <li>\(d\): deslocamento horizontal (fase)</li>
+            </ul>
+            
+            <br />
             <iframe src="https://www.geogebra.org/classic/eem6znxx?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
         </div>
         <br />
